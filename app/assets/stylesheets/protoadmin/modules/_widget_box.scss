@@ -5,7 +5,7 @@
   background: #F9F9F9;
   .widget-title {
     background-color: #efefef;
-    @include gradient-vertical(#fdfdfd, #eaeaea);
+    /* @include gradient-vertical(#fdfdfd, #eaeaea); */
     border-bottom: 1px solid #cdcdcd;
     height: 36px;
     span.icon {

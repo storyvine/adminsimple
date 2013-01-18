@@ -29,9 +29,12 @@
 }
 
 .alert-notice {
-  background-color: $infoBackground;
-  border-color: $infoBorder;
-  color: $infoText;
+  /* background-color: $infoBackground; */
+  /* border-color: $infoBorder; */
+  /* color: $infoText; */
+  background-color: magenta;
+  border-color: indigo;
+  color: pink;
 }
 
 dl.dl-horizontal {

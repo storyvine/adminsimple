@@ -109,15 +109,17 @@
   }
   #content {
     margin: 0;
-    @include border-top-radius(5px);
+    border-top-radius: 5px;
   }
   #sign_in {
     padding: 10;
     margin-top: 0;
     width: 100%;
-    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.6) inset);
+    /* @include box-shadow(0 0 6px rgba(0, 0, 0, 0.6) inset); */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6) inset;
     @include box-sizing(border-box);
-    @include border-radius(0);
+    /* @include border-radius(0); */
+    border-radius: 0;
     .form-inputs {
       input[type="text"], input[type="email"], input[type="password"] {
         width: 82%;

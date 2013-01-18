@@ -1,10 +1,10 @@
-@import 'protoadmin/theme';
+@import 'config';
 
 ::selection {
-  background: $linkColor;
+  background: $link-color;
 }
 ::-moz-selection {
-  background: $linkColor;
+  background: $link-color;
 }
 
 body {
@@ -16,8 +16,9 @@ body.sign-in {
 
 #header {
   border-bottom: 1px solid #ddd;
-  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
-  @include gradient-vertical(#ddd, #aaa);
+  /* @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.5)); */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  /* @include gradient-vertical(#ddd, #aaa); */
   h1 a {
     color: #333;
   }
@@ -74,7 +75,7 @@ body.sign-in {
     }
     > li.active {
       background-color: #aaa;
-      @include gradient-vertical(#999, #aaa);
+      /* @include gradient-vertical(#999, #aaa); */
       a {
         background: transparent;
       }

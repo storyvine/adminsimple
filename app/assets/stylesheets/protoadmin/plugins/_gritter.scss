@@ -16,7 +16,7 @@
   border: 1px solid black;
   box-shadow: 0 1px 4px #000, 0 1px 0 rgba(255, 255, 255, 0.3) inset;
   background: none;
-  @include gradient-vertical(#545454, #232323);
+  /* @include gradient-vertical(#545454, #232323); */
   .gritter-title {
     font-weight: normal;
   }
@@ -50,5 +50,5 @@
 }
 .gritter-item-wrapper.hover .gritter-item {
   background: none;
-  @include gradient-vertical(#545454, #232323);
+  /* @include gradient-vertical(#545454, #232323); */
 }

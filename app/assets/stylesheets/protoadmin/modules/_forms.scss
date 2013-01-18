@@ -51,6 +51,6 @@ form {
 .modal.remote {
   .form-actions {
     background-color: whiteSmoke;
-    @include border-bottom-radius(6px);
+    border-bottom-radius: 6px;
   }
 }

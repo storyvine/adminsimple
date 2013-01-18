@@ -1,7 +1,7 @@
 %h2 Table Examples
 
 = widget_box title: 'Static table', icon: 'th', class: 'nopadding' do
-  %table.table.table-bordered.table-striped
+  %table.table-vborder.table-banded
     %thead
       %tr
         %th Column name
@@ -42,7 +42,7 @@
 
 
 = widget_box title: 'Static table with checkboxes', icon: :checkbox, class: 'nopadding', label: 6 do
-  %table.table.table-bordered.table-striped.with-check
+  %table.table-vborder.table-banded.with-check
     %thead
       %tr
         %th
@@ -97,7 +97,7 @@
 
 
 = widget_box title: 'Static table with checkboxes in box with padding', icon: 'th', label: {info: 'Featured'} do
-  %table.table.table-bordered.table-striped.with-check
+  %table.table-vborder.table-banded.with-check.table-condensed
     %thead
       %tr
         %th
@@ -152,7 +152,7 @@
 
 
 = widget_box title: 'Dynamic table', icon: 'th', class: 'nopadding' do
-  %table.table.table-bordered{rel: 'datatable'}
+  %table.table-vborder.table-banded.table-hover{rel: 'datatable'}
     %thead
       %tr
         %th Rendering engine

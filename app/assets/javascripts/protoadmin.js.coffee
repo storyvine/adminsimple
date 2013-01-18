@@ -4,7 +4,6 @@
 #
 #= require_self
 #
-#= require protoadmin/plugins/bootstrap
 #= require protoadmin/plugins/datatable
 #= require protoadmin/plugins/chosen
 #= require protoadmin/plugins/flot

@@ -13,7 +13,8 @@
     margin: 0;
     background: transparent;
     font-size: 0.9em;
-    @include box-shadow(none);
+    /* @include box-shadow(none); */
+    box-shadow: none
   }
   button {
     border: 0;
