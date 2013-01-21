@@ -1,17 +1,21 @@
 body.sign-in
   background: #eee
-  #header h1
-    width: 100%
+
+#header h1
+  width: 100%
 
 #sign_in
-  background: #fff
-  width: 350px
+  background: white
+  border-radius: 10px
+  box-shadow: 0 0 10px rgba(black, 0.2)
   margin: 45px auto 0
   padding: 30px
-  border-radius: 10px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-  h2
-    margin-top: 0
+  width: 350px
+
+#sign_in h2
+  margin-top: 0
+
+#sign_in
   .form-inputs
     input[type="password"],
     input[type="text"]
@@ -21,8 +25,17 @@ body.sign-in
     padding-left: 0
     padding-right: 0
   .form-actions .control-group
-    padding-top: 6px
     float: left
+    padding-top: 6px
   .form-actions .btn
     float: right
+
+@media (max-width: 480px)
+  #sign_in
+    +box-sizing(border-box)
+    border-radius: 0
+    box-shadow: 0 0 6px rgba(black, 0.6) inset
+    margin-top: 0
+    padding: 10
+    width: 100%
 

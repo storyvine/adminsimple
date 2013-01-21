@@ -1,24 +1,24 @@
 #user_nav
-  position: absolute
-  z-index: 5
-  right: 15px
-  top: 10px
   +user-select(none)
+  position: absolute
+  top: 10px
+  right: 15px
+  z-index: 5
   li
     text-align: left
     text-shadow: none
   > ul > li
-    padding: 0
     height: 26px
     margin-right: -1px
+    padding: 0
     > a
       +font-size(12)
-      display: block
-      text-decoration: none
-      padding: 5px 10px
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
-      line-height: 17px
       background: transparent
+      display: block
+      line-height: 17px
+      text-decoration: none
+      text-shadow: 0 -1px 0 rgba(black, 0.25)
+      padding: 5px 10px
     > a:hover i
       opacity: 0.8
     i
@@ -31,3 +31,11 @@
   > ul > .active i
     opacity: 0.8
 
+@media (max-width: 769px) and (min-width: 480px)
+  #user_nav > ul > li > a .text
+    display: none
+
+@media (max-width: 480px)
+  #user_nav
+    top: 30px
+    right: 45px

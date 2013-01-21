@@ -1,68 +1,68 @@
 #main_nav
-  position: absolute
-  z-index: 4
-  width: 220px
   +user-select(none)
+  position: absolute
+  width: 220px
+  z-index: 4
   > .collapse-btn
-    position: absolute
-    right: 10px
-    top: -43px
-    z-index: 100
-    display: none
-    height: 18px
     +user-select(none)
+    display: none
+    position: absolute
+    top: -43px
+    right: 10px
+    height: 18px
+    z-index: 100
   a
     +font-size(12)
     display: block
     text-decoration: none
   > ul
-    width: 220px
-    height: auto
     margin: 0
     padding: 0
+    width: 220px
+    height: auto
     > li
       position: relative
       > a
-        height: 21px
+        font-weight: normal
         margin: 0
         padding: 10px 0 8px 10px
-        font-weight: normal
+        height: 21px
       i
         +font-size(14)
-        margin-right: 10px
         background: none
+        margin-right: 10px
       .label
         border-radius: 3px
+        box-shadow: 0 1px 2px rgba(black, 0.5) inset, 0 1px 0 rgba(white, 0.2)
         float: right
         margin: 0 20px 0 0
         padding: 3px 5px 2px
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 rgba(255, 255, 255, 0.2)
     > li.active
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset
+      box-shadow: 0 2px 4px rgba(black, 0.2) inset
       &:after
+        color: white
+        content: "\f0d9"
+        font-family: 'FontAwesome'
+        font-size: 30px
+        line-height: 30px
         position: absolute
+        overflow: hidden
         top: 8px
         right: 0
         width: 8px
-        overflow: hidden
-        font-size: 30px
-        line-height: 30px
-        font-family: 'FontAwesome'
-        content: "\f0d9"
-        color: #fff
       a
         background: transparent
     ul
       box-shadow: 0 0 3px rgba(black, 0.5) inset
-      width: 220px
-      margin: 0
-      height: 0
       overflow: hidden
+      margin: 0
       padding: 0
+      width: 220px
+      height: 0
       li a
-        height: 21px
+        border-bottom: 1px solid #222
         padding: 10px 0 10px 25px
-        border-bottom: 1px solid #222222
+        height: 21px
       li.active:after
         color: #eee
       li:last-child a
@@ -73,3 +73,56 @@
     +transition(opacity 0.2s ease-in)
   > ul ul
     +transition(all 0.2s ease-in)
+
+
+@media (max-width: 769px) and (min-width: 480px)
+  #main_nav
+    > ul > li > a .text
+      display: none
+    > ul
+      width: 40px
+      ul
+        +border-radius(5px)
+        margin-top: -42px
+        opacity: 0.9
+        position: absolute
+        left: 45px
+        li a
+          border: 0
+          margin: 4px
+          padding: 2px 10px
+          &:hover
+            color: white
+    > ul ul li a
+      border: 0
+
+@media (max-width: 480px)
+  #main_nav
+    position: relative
+    width: 100%
+    > .collapse-btn
+      display: block
+    > ul > li > a .text
+      display: inline
+    > ul
+      border-bottom: 0
+      border-top: 0
+      box-shadow: 0 4px 5px rgba(black, 0.3)
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      margin-top: 0
+      width: 100%
+      height: 0
+      > li.active:after
+        content: ''
+      ul
+        opacity: 1
+        position: relative
+        margin-top: 0
+        left: 0
+        width: 100%
+    > ul.open
+      opacity: 1
+
+

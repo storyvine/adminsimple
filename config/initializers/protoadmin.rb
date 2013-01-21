@@ -2,7 +2,7 @@ Protoadmin.setup do |config|
 
   # Set the theme
   # can be dark, light, or bootstrap or one that you provide.
-  config.theme = :light
+  config.theme = :dark
 
   # Specify the layout order
   # You can reorder the default, include additional layout modules or remove unused/unsupported ones.
