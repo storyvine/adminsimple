@@ -1,0 +1,46 @@
+.breadcrumbs
+  padding-left: 10px
+  box-shadow: 0 0 1px white
+  white-space: nowrap
+  margin-bottom: -35px
+  position: relative
+  top: 75px
+  i
+    +font-size(14)
+    margin-right: 10px
+    height: 15px
+    width: 15px
+    text-align: center
+    line-height: 10px
+  > a, > span
+    +font-size(12)
+    display: inline-block
+    padding: 6px 28px 6px 10px
+    text-decoration: none
+    &:after
+      position: absolute
+      display: inline-block
+      font-size: 3em
+      font-weight: 100
+      line-height: 0
+      margin-top: 7px
+      padding-left: 17px
+      content: '\203A'
+    &:last-child
+      font-weight: bold
+      color: #444
+      &:after
+        content: ''
+        display: inline
+  .label
+    display: none
+
+.breadcrumbs
+  background-color: #E5E5E5
+  border-top: 1px solid #d6d6d6
+  border-bottom: 1px solid #d6d6d6
+  a
+    color: #666
+    &:hover
+      color: #333
+

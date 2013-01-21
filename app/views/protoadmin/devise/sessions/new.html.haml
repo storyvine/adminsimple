@@ -6,14 +6,12 @@
   = f.error_notification
   .form-inputs
     = f.input :email, label: false, required: false, autofocus: true, wrapper: :prepend do
-      <span class="add-on"><i class="icon-user"></i></span>
       = f.input_field :email, placeholder: 'Email Address'
     = f.input :password, label: false, required: false, wrapper: :prepend do
-      <span class="add-on"><i class="icon-key"></i></span>
       = f.input_field :password, placeholder: 'Password'
 
   .form-actions
     = f.input :remember_me, as: :boolean, wrapper: :checkbox if devise_mapping.rememberable?
-    = f.button :submit, "Sign in", class: 'btn-inverse btn-large'
+    = f.button :submit, "Sign in"
 
 = render 'protoadmin/devise/shared/links'

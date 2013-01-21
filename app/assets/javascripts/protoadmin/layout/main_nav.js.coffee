@@ -14,7 +14,7 @@ class Protoadmin.Layout.MainNav
     @toggleGroup($nestedActive) if $(window).width() > 767
 
   bindEvents: ->
-    @$el.find('> .btn').on('click', @toggle)
+    @$el.find('> .collapse-btn').on('click', @toggle)
     @$groups.on('click', @onToggleGroup)
     $(window).on('resize', @onResize)
     @$el.find('li:not(.has-nested) a').on('click', @onItemActivate)

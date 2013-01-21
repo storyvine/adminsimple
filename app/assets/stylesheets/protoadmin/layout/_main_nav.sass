@@ -1,0 +1,75 @@
+#main_nav
+  position: absolute
+  z-index: 4
+  width: 220px
+  +user-select(none)
+  > .collapse-btn
+    position: absolute
+    right: 10px
+    top: -43px
+    z-index: 100
+    display: none
+    height: 18px
+    +user-select(none)
+  a
+    +font-size(12)
+    display: block
+    text-decoration: none
+  > ul
+    width: 220px
+    height: auto
+    margin: 0
+    padding: 0
+    > li
+      position: relative
+      > a
+        height: 21px
+        margin: 0
+        padding: 10px 0 8px 10px
+        font-weight: normal
+      i
+        +font-size(14)
+        margin-right: 10px
+        background: none
+      .label
+        border-radius: 3px
+        float: right
+        margin: 0 20px 0 0
+        padding: 3px 5px 2px
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 rgba(255, 255, 255, 0.2)
+    > li.active
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset
+      &:after
+        position: absolute
+        top: 8px
+        right: 0
+        width: 8px
+        overflow: hidden
+        font-size: 30px
+        line-height: 30px
+        font-family: 'FontAwesome'
+        content: "\f0d9"
+        color: #fff
+      a
+        background: transparent
+    ul
+      box-shadow: 0 0 3px rgba(black, 0.5) inset
+      width: 220px
+      margin: 0
+      height: 0
+      overflow: hidden
+      padding: 0
+      li a
+        height: 21px
+        padding: 10px 0 10px 25px
+        border-bottom: 1px solid #222222
+      li.active:after
+        color: #eee
+      li:last-child a
+        border-bottom: 0
+
+.animated #main_nav
+  > ul
+    +transition(opacity 0.2s ease-in)
+  > ul ul
+    +transition(all 0.2s ease-in)

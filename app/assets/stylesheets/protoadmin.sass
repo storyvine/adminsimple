@@ -7,9 +7,8 @@ $experimental-support-for-mozilla: true
 $experimental-support-for-opera: true
 $experimental-support-for-microsoft: true
 
-
 // Pick a library: compass, bourbon or utensils/polyfills
-@import utensils/polyfills
+@import bourbon
 @import utensils/mixins
 
 // Core base styles
@@ -70,10 +69,6 @@ $experimental-support-for-microsoft: true
 @import utensils/print
 
 // plugins
-@import protoadmin/plugins/gritter
-@import protoadmin/plugins/chosen
-@import protoadmin/plugins/datatable
-
 @import protoadmin/plugins/font_awesome
 
 // layout
@@ -87,15 +82,7 @@ $experimental-support-for-microsoft: true
 // modules
 @import protoadmin/modules/breadcrumbs
 @import protoadmin/modules/widget_box
-@import protoadmin/modules/forms
-@import protoadmin/modules/tables
-@import protoadmin/modules/graph_boxes
 
 // responsive
 @import protoadmin/responsive
-
-#content.container
-  max-width: none
-.widget-content table
-  margin: 0
 
