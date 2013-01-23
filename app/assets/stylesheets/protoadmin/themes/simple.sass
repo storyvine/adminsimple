@@ -1,0 +1,79 @@
+body
+  background: white
+
+body.sign-in
+  background: white
+
+#header
+  border-bottom: 1px solid #ccc
+  h1 a
+    color: #333
+
+#search
+  background-color: white
+  border: 1px solid #ccc
+  color: #333
+  button
+    color: #333
+
+#user_nav
+  > ul > li > a
+    color: #555
+    text-shadow: 0 1px 0 rgba(white, 0.5)
+    &:hover
+      color: #333
+    i
+      color: #333
+
+  > ul .active > a
+    color: #333
+    i
+      color: #333
+
+#main_nav
+  .collapse-btn
+    color: #333
+  > ul
+    background: white
+    > li
+      border-bottom: 1px solid #ccc
+      > a
+        color: #333
+        text-shadow: 0 1px 0 rgba(white, 0.5)
+      > a:hover
+        background-color: #eee
+      .label
+        background-color: #eee
+    > li.active
+      box-shadow: none
+      background-color: #f3f3f3
+      &:after
+        color: #ccc
+    ul
+      background-color: white
+      box-shadow: none
+      li:first-child
+        border-top: 1px solid #ccc
+      li a
+        color: #333
+      li:hover a, li.active a
+        color: #333
+        background-color: #ddd
+
+#content
+  background: transparent
+  border-left: 1px solid #ccc
+  margin-top: 0
+  > .filler
+    left: 220px
+    border-left: 1px solid #ccc
+    background: white
+
+@media (max-width: 769px) and (min-width: 480px)
+  #content > .filler
+    left: 40px
+
+@media (max-width: 480px)
+  #content > .filler
+    left: 0
+
