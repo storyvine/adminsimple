@@ -43,7 +43,7 @@ Protoadmin.setup do |config|
 
     c.semantic_navigation :protoadmin_user_nav do |n|
       n.item n.t('protoadmin.user_nav.profile'), proc{ protoadmin.edit_registration_path }, icon: 'user'
-      n.item n.t('protoadmin.user_nav.settings'), '#', icon: 'cog'
+      n.item n.t('protoadmin.user_nav.settings'), proc{ protoadmin.settings_path }, icon: 'cog'
       n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_admin_session_path }, icon: 'share-alt'
     end
   end
@@ -51,7 +51,6 @@ Protoadmin.setup do |config|
   SimpleForm.setup do |c|
     # There are more configuration options, but for brevity they're kept in a
     # different initializer -- which you can tweak here.
-
     c.default_wrapper = :bootstrap
     c.boolean_style = :nested
     c.button_class = 'btn'
