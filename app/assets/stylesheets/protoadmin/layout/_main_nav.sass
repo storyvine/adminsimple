@@ -1,5 +1,5 @@
 #main_nav
-  +user-select(none)
+  +prefixme(user-select, none, webkit moz ms spec)
   position: absolute
   width: 220px
   z-index: 4
@@ -65,12 +65,12 @@
 
 .animated #main_nav
   > ul
-    +transition(opacity 0.2s ease-in)
+    +tranny(opacity 0.2s ease-in)
   > ul ul
-    +transition(all 0.2s ease-in)
+    +tranny(all 0.2s ease-in)
 
 #main_nav > .collapse-btn
-  +user-select(none)
+  +prefixme(user-select, none, webkit moz ms spec)
   display: none
   position: absolute
   top: -50px

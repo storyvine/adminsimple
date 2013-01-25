@@ -1,7 +1,6 @@
 # WIP
-- Fix layout issues
-- Remove dependency on bourbon and utensils?
-- keep styles completely independent from libraries (user defined)
+- add some default styling around the forms
+- double check the js for active states on navigation
 - rename the project
 - tidy up the gemspec stuff
 
