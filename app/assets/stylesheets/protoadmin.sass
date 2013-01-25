@@ -1,74 +1,8 @@
-// Output configuration
-// -----------------------------------------------------------------------------
-$legacy-support-for-ie: false
-$legacy-support-for-ie8: $legacy-support-for-ie
-$support-for-original-webkit-gradients: true
-$experimental-support-for-mozilla: true
-$experimental-support-for-opera: true
-$experimental-support-for-microsoft: true
-
-// Pick a library: compass, bourbon or utensils/polyfills
-@import bourbon
-@import utensils/mixins
-
-// Core base styles
-@import config
-@import utensils/normalize
-@import utensils/scaffold
-@import utensils/typography
-@import utensils/container
-@import utensils/transition
-@import utensils/collapse
-
-// Component styles
-@import utensils/well
-@import utensils/icon_caret
-@import utensils/icon_close
-@import utensils/icon_paddle
-@import utensils/cursor_hand
-@import utensils/touch_scroller
-@import utensils/button_semigloss
-@import utensils/button_modifiers
-@import utensils/button_group
-@import utensils/table
-@import utensils/form_controls
-@import utensils/form_horizontal
-@import utensils/form_inline
-@import utensils/form_search
-@import utensils/form_stack
-@import utensils/content_editable
-@import utensils/drop
-@import utensils/menu
-@import utensils/accordion
-@import utensils/breadcrumb
-@import utensils/pager
-@import utensils/pagination
-@import utensils/tab
-@import utensils/tab_stacked
-@import utensils/pill
-@import utensils/pill_stacked
-@import utensils/decal
-@import utensils/progress
-@import utensils/notification
-@import utensils/flash_message
-@import utensils/tip
-@import utensils/pop
-@import utensils/media_grid
-@import utensils/navbar
-@import utensils/carousel
-@import utensils/indicator
-@import utensils/slider
-@import utensils/modal
-@import utensils/mirror
-@import utensils/full_bleed
-
-// Layouts and application specific imports
-@import utensils/upgrade
-
-// Let them print
-@import utensils/print
+// mixins (based on bourbon)
+@import protoadmin/mixins/mixins
 
 // plugins
+@import protoadmin/plugins/normalize
 @import protoadmin/plugins/font_awesome
 
 // layout
@@ -82,9 +16,6 @@ $experimental-support-for-microsoft: true
 // modules
 @import protoadmin/modules/breadcrumbs
 @import protoadmin/modules/widget_box
-
-// responsive
-@import protoadmin/responsive
 
 // themes
 @import protoadmin/themes/dark

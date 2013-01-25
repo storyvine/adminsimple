@@ -1,8 +1,7 @@
 # WIP
-
-- Remove old IE support
-- Change JS to use bindable and utensils
 - Fix layout issues
-- Release utensils to the public
-- Remove dependency on bourbon?
+- Remove dependency on bourbon and utensils?
+- keep styles completely independent from libraries (user defined)
+- rename the project
+- tidy up the gemspec stuff
 

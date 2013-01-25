@@ -1,0 +1,74 @@
+// Mixins and functions courtesy: bourbon.io
+@function compact($values...)
+  $list: ()
+  @each $value in $values
+    @if $value
+      $list: append($list, $value, comma)
+  @return $list
+
+@mixin prefixer($property, $value, $prefixes)
+  @each $prefix in $prefixes
+    @if $prefix == webkit
+      -webkit-#{$property}: $value
+    @else if $prefix == moz
+      -moz-#{$property}: $value
+    @else if $prefix == ms
+      -ms-#{$property}: $value
+    @else if $prefix == o
+      -o-#{$property}: $value
+    @else if $prefix == spec
+      #{$property}: $value
+    @else
+      @warn "Unrecognized prefix: #{$prefix}"
+
+
+@mixin box-sizing($type:border-box)
+  $arg: unquote($type)
+  +prefixer(box-sizing, $arg, webkit moz spec)
+
+@mixin user-select($type:none)
+  $arg: unquote($type)
+  +prefixer(user-select, $arg, webkit moz ms spec)
+
+@mixin clearfix
+  content: ""
+  display: table
+  clear: both
+
+@mixin tab-focus
+  outline: thin dotted
+  outline: 5px auto -webkit-focus-ring-color
+  outline-offset: -2px
+
+@mixin transition($properties...)
+  +prefixer(transition, $properties, webkit moz ms o spec)
+
+
+@mixin linear-gradient($pos, $G1, $G2: false, $G3: false, $G4: false, $G5: false, $G6: false, $G7: false, $G8: false, $G9: false, $G10: false, $fallback: false)
+  $pos-type: type-of(nth($pos, 1))
+
+  @if ($pos-type == color) or (nth($pos, 1) == "transparent")
+    $G10: $G9
+    $G9: $G8
+    $G8: $G7
+    $G7: $G6
+    $G6: $G5
+    $G5: $G4
+    $G4: $G3
+    $G3: $G2
+    $G2: $G1
+    $G1: $pos
+    $pos: top
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10)
+  $fallback-color: nth($G1, 1)
+
+  @if (type-of($fallback) == color) or ($fallback == "transparent")
+    $fallback-color: $fallback
+
+  background-color: $fallback-color
+  background-image: -webkit-linear-gradient($pos, $full)
+  background-image: -moz-linear-gradient($pos, $full)
+  background-image: -ms-linear-gradient($pos, $full)
+  background-image: -o-linear-gradient($pos, $full)
+  background-image: unquote("linear-gradient(#{$pos}, #{$full})")
+

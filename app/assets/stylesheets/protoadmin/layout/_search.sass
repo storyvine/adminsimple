@@ -1,37 +1,41 @@
 #search
   +user-select(none)
-  border-radius: 4px
   position: absolute
-  top: 40px
-  right: 20px
+  top: 45px
+  right: 1.3em
   height: 27px
   z-index: 2
 
 #search input
-  +font-size(12)
+  font-size: 12px
   background: transparent
   border: 0
-  box-shadow: none
-  color: #888
-  margin: 0
-  padding: 2px 0px 5px 10px
-  width: 185px
+  border-radius: 1em
+  color: #333
+  padding: 0.5em 1em
+  width: 190px
   &:focus
-    color: #aaa
+    outline: 0
+  &:-moz-placeholder
+    color: #999
+  &:-ms-input-placeholder
+    color: #999
+  &::-webkit-input-placeholder
+    color: #999
 
 #search button
+  position: absolute
+  top: 2px
+  right: 2px
   background: transparent
   border: 0
-  padding: 3px 10px 4px
   opacity: 0.5
   outline: 0
-  min-width: 32px
   &:hover, &:active, &:focus
     opacity: 0.8
-  i
-    line-height: 22px
+
 
 @media (max-width: 480px)
-  #search
-    display: none
+  #search input
+    width: 100px
 

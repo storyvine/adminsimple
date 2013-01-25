@@ -1,41 +1,43 @@
 #user_nav
   +user-select(none)
   position: absolute
-  top: 10px
-  right: 15px
+  top: 0
+  right: 1em
   z-index: 5
-  li
-    text-align: left
-    text-shadow: none
-  > ul > li
-    height: 26px
-    margin-right: -1px
-    padding: 0
-    > a
-      +font-size(12)
-      background: transparent
-      display: block
-      line-height: 17px
-      text-decoration: none
-      text-shadow: 0 -1px 0 rgba(black, 0.25)
-      padding: 5px 10px
-    > a:hover i
-      opacity: 0.8
-    i
-      +font-size(14)
-      opacity: 0.5
-    .label
-      top: 0
-      font-size: inherit
 
-  > ul > .active i
-    opacity: 0.8
+#user_nav .nav
+  margin-left: 0
+  list-style: none
+  list-style-image: none
 
-@media (max-width: 769px) and (min-width: 480px)
+#user_nav li
+  display: inline-block
+
+#user_nav ul > li
+  padding: 0
+
+#user_nav ul > li > a
+  font-size: 12px
+  display: block
+  text-decoration: none
+  padding: 0.25em 0.75em
+
+#user_nav ul > li > a:hover i
+  opacity: 0.8
+
+#user_nav ul > li i
+  font-size: 14px
+  opacity: 0.5
+
+#user_nav ul > li .label
+  top: 0
+  font-size: inherit
+
+#user_nav > ul > .active i
+  opacity: 0.8
+
+
+@media (max-width: 769px)
   #user_nav > ul > li > a .text
     display: none
 
-@media (max-width: 480px)
-  #user_nav
-    top: 30px
-    right: 45px
