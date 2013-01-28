@@ -5,7 +5,6 @@ gemspec
 # used by the dummy application
 gem 'rails', '>= 3.2.8'
 gem 'sqlite3'
-gem 'utensils', github: 'modeset/utensils'
 
 group :development, :test do
   gem 'rspec-rails'
