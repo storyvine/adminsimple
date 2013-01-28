@@ -1,0 +1,1 @@
+require 'adminsimple/rails/engine'

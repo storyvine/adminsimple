@@ -1,0 +1,79 @@
+body#adminsimple_dark
+  background: #444
+
+#adminsimple_dark
+  #header
+    +bar-gradient(#3f3f3f, #222)
+    border-bottom: 1px solid #555
+    box-shadow: 0 1px 0 #333
+    h1 a
+      color: #eee
+
+  #search input
+    color: #ccc
+    background-color: #222
+    box-shadow: -2px 2px 3px rgba(black, 0.7) inset, 0 1px 0 rgba(white, 0.2)
+    &:focus
+      box-shadow: 0 0 6px 2px #52a8ec, -2px 2px 3px rgba(black, 0.7) inset
+    &:-moz-placeholder
+      color: #666
+    &:-ms-input-placeholder
+      color: #666
+    &::-webkit-input-placeholder
+      color: #666
+
+  #search button
+    color: white
+
+  #user_nav > ul > li > a
+    color: #999
+    text-shadow: 0 -1px 0 rgba(black, 0.25)
+
+  #user_nav > ul > li > a:hover,
+  #user_nav > ul > li > a i,
+  #user_nav > ul .active > a,
+  #user_nav > ul .active > a i
+    color: white
+
+  #main_nav .collapse-btn
+    color: white
+  #main_nav > ul
+    background: #444
+    border-top: 1px solid #333
+    border-bottom: 1px solid #4e4e4e
+  #main_nav > ul > li
+    border-top: 1px solid #4e4e4e
+    border-bottom: 1px solid #393939
+    &:first-child
+      border-top: none
+    > a
+      color: #aaa
+      text-shadow: 0 1px 0 rgba(black, 0.5)
+    > a:hover
+      background-color: #4a4a4a
+    .label
+      background-color: #222
+  #main_nav > ul > li.active
+    background-color: #3a3a3a
+    &:after
+      color: #eee
+  #main_nav > ul ul
+    background-color: #2a2a2a
+    li a
+      color: #777
+      border-top: 1px solid #333
+    li:hover a, li.active a
+      color: #ccc
+      background-color: #272727
+
+  #content,
+  #content > .filler
+    background: #eee
+
+@media (max-width: 769px) and (min-width: 480px)
+  #adminsimple_dark
+    #main_nav > ul ul li
+      border-bottom: 1px solid #333
+      border-right: 1px solid #333
+      border-left: 1px solid #333
+

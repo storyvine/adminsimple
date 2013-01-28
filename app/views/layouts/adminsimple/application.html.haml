@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title= t('adminsimple.site_title')
+    %meta{ charset: "UTF-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    = csrf_meta_tags
+    = stylesheet_link_tag 'adminsimple', 'adminsimple/styleguide'
+    = javascript_include_tag 'adminsimple'
+  %body{class: @body_class, id:"adminsimple_#{Adminsimple.configuration.theme}"}
+
+    = render partial: "/adminsimple/layout/header"
+    - Adminsimple.configuration.layout.each do |partial|
+      = render partial: "/adminsimple/layout/#{partial}"

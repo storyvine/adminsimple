@@ -1,1 +1,0 @@
-require 'protoadmin/rails/engine'
