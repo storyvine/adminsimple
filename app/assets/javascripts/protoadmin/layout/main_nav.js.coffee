@@ -4,6 +4,7 @@ class Protoadmin.Layout.MainNav
 
   constructor: ->
     @$el = $(@constructor.el)
+    @$user = $('#user_nav li')
     @build()
     @bindEvents()
 
@@ -30,6 +31,7 @@ class Protoadmin.Layout.MainNav
 
   deactivateActives: ->
     @$el.find('li.active').removeClass('active')
+    @$user.removeClass('active')
 
   activateItem: (item) ->
     item.addClass('active')
