@@ -5,9 +5,9 @@
     %meta{ charset: "UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = csrf_meta_tags
-    = stylesheet_link_tag 'protoadmin', 'protoadmin/styleguide', "protoadmin/themes/#{Protoadmin.configuration.theme}"
+    = stylesheet_link_tag 'protoadmin', 'protoadmin/styleguide'
     = javascript_include_tag 'protoadmin'
-  %body{class: @body_class}
+  %body{class: @body_class, id:"protoadmin_#{Protoadmin.configuration.theme}"}
 
     = render partial: "/protoadmin/layout/header"
     - Protoadmin.configuration.layout.each do |partial|

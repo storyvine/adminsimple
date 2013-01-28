@@ -1,0 +1,126 @@
+#main_nav
+  +prefixme(user-select, none, webkit moz ms spec)
+  position: absolute
+  width: 220px
+  z-index: 4
+
+#main_nav a
+  font-size: 12px
+  display: block
+  text-decoration: none
+
+#main_nav > ul
+  margin: 0
+  padding: 0
+  width: 220px
+  height: auto
+
+#main_nav > ul > li
+  position: relative
+  > a
+    font-weight: normal
+    margin: 0
+    padding: 0.75em 0 0.75em 0.75em
+  i
+    font-size: 14px
+    background: none
+    margin-right: 0.75em
+  .label
+    border-radius: 5px
+    box-shadow: 0 1px 2px rgba(black, 0.5) inset, 0 1px 0 rgba(white, 0.2)
+    text-align: center
+    float: right
+    margin: 0 1.5em 0 0
+    padding: 3px 5px 2px
+
+#main_nav > ul > li.active
+  box-shadow: 0 2px 4px rgba(black, 0.2) inset
+  &:after
+    color: white
+    content: "\f0d9"
+    font-family: 'FontAwesome'
+    font-size: 30px
+    position: absolute
+    overflow: hidden
+    top: 5px
+    right: 0
+    width: 8px
+  a
+    background: transparent
+
+#main_nav > ul ul
+  box-shadow: 0 0 3px rgba(black, 0.5) inset
+  overflow: hidden
+  margin: 0
+  padding: 0
+  width: 220px
+  height: 0
+  li a
+    border-bottom: 1px solid #222
+    padding: 0.75em 0 0.75em 1.5em
+  li.active:after
+    color: #eee
+  li:last-child a
+    border-bottom: 0
+
+.animated #main_nav
+  > ul
+    +tranny(opacity 0.2s ease-in)
+  > ul ul
+    +tranny(all 0.2s ease-in)
+
+#main_nav > .collapse-btn
+  +prefixme(user-select, none, webkit moz ms spec)
+  display: none
+  position: absolute
+  top: -50px
+  left: 10px
+  z-index: 100
+
+
+@media (max-width: 769px) and (min-width: 480px)
+  #main_nav > ul > li > a .text
+    display: none
+  #main_nav > ul
+    width: 40px
+  #main_nav > ul ul
+    opacity: 0.9
+    position: absolute
+    margin-top: -37px
+    left: 40px
+  #main_nav > ul ul li a
+    border: 0
+    padding: 0.75em
+    &:hover
+      color: white
+
+@media (max-width: 480px)
+  #main_nav
+    position: relative
+    width: 100%
+  #main_nav > .collapse-btn
+    display: block
+    cursor: pointer
+  #main_nav > ul > li > a .text
+    display: inline
+  #main_nav > ul
+    border-bottom: 0
+    border-top: 0
+    box-shadow: 0 4px 5px rgba(black, 0.3)
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    margin-top: 0
+    width: 100%
+    height: 0
+    > li.active:after
+      content: ''
+    ul
+      opacity: 1
+      position: relative
+      margin-top: 0
+      left: 0
+      width: 100%
+  #main_nav > ul.open
+    opacity: 1
+

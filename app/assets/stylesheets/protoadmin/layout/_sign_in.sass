@@ -1,0 +1,45 @@
+body.sign-in
+  background: #eee
+
+#header h1
+  width: 100%
+
+#sign_in
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  background: white
+  border-radius: 10px
+  box-shadow: 0 0 10px rgba(black, 0.2)
+  margin: 45px auto 0
+  padding: 30px
+  width: 350px
+
+#sign_in h2
+  margin-top: 0
+
+#sign_in
+  .form-inputs
+    input[type="password"],
+    input[type="text"]
+      width: 100%
+  .form-actions
+    content: ""
+    display: table
+    clear: both
+    padding-left: 0
+    padding-right: 0
+  .form-actions .control-group
+    float: left
+    padding-top: 6px
+  .form-actions .btn
+    float: right
+
+@media (max-width: 480px)
+  #sign_in
+    border-radius: 0
+    box-shadow: 0 0 6px rgba(black, 0.6) inset
+    margin-top: 0
+    padding: 10
+    width: 100%
+

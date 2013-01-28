@@ -4,22 +4,13 @@
 #
 #= require_self
 #
-#= require protoadmin/plugins/bootstrap
-#= require protoadmin/plugins/datatable
-#= require protoadmin/plugins/chosen
-#= require protoadmin/plugins/flot
-#= require protoadmin/plugins/gritter
-#= require protoadmin/plugins/peity
-#
 #= require_tree ./protoadmin/layout
-#= require_tree ./protoadmin/modules
 
 jQuery -> Protoadmin.loaded()
 
 class @Protoadmin # singleton
 
   @Layout: {}
-  @Module: {}
 
   # provides the Protoadmin 'callback name', callback functionality
   # args: name, options = {}, callback = function() {}

@@ -1,0 +1,20 @@
+#header
+  overflow: hidden
+  height: 80px
+  z-index: 1
+
+#header h1
+  font-size: 1.7em
+  font-weight: 100
+  letter-spacing: 1px
+  line-height: 80px
+  position: relative
+  margin: 0 0 0 10px
+  a
+    +prefixme(user-select, none, webkit moz ms spec)
+    text-decoration: none
+
+@media (max-width: 480px)
+  #header h1
+    margin-left: 40px
+

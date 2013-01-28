@@ -1,0 +1,27 @@
+// Mixins and functions courtesy: bourbon.io
+@mixin prefixme($property, $value, $prefixes)
+  @each $prefix in $prefixes
+    @if $prefix == webkit
+      -webkit-#{$property}: $value
+    @else if $prefix == moz
+      -moz-#{$property}: $value
+    @else if $prefix == ms
+      -ms-#{$property}: $value
+    @else if $prefix == o
+      -o-#{$property}: $value
+    @else if $prefix == spec
+      #{$property}: $value
+    @else
+      @warn "Unrecognized prefix: #{$prefix}"
+
+@mixin tranny($properties...)
+  +prefixme(transition, $properties, webkit moz ms o spec)
+
+@mixin bar-gradient($start, $end)
+  background-image: -webkit-linear-gradient(top, $start, $end)
+  background-image: -moz-linear-gradient(top, $start, $end)
+  background-image: -ms-linear-gradient(top, $start, $end)
+  background-image: -o-linear-gradient(top, $start, $end)
+  background-image: linear-gradient(top, $start, $end)
+
+

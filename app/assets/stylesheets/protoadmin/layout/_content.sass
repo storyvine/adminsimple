@@ -1,0 +1,40 @@
+#content
+  margin: 1px 0 0 220px
+  padding-bottom: 2em
+  width: auto
+  z-index: 3
+
+#content > .filler
+  position: fixed
+  width: 100%
+  height: 100%
+  left: 220px
+
+#content > .main-content
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 0 1em
+
+#content
+  h1, h2, p#notice
+    white-space: nowrap
+    margin: 0 0 55px
+    padding: 20px 0
+  h3
+    margin: 10px -15px
+    padding: 0 15px
+
+
+@media (max-width: 769px) and (min-width: 480px)
+  #content
+    margin-left: 40px
+  #content > .filler
+    left: 40px
+
+@media (max-width: 480px)
+  #content
+    margin: 0
+  #content > .filler
+    left: 0
+

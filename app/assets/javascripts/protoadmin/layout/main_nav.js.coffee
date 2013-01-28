@@ -4,6 +4,7 @@ class Protoadmin.Layout.MainNav
 
   constructor: ->
     @$el = $(@constructor.el)
+    @$user = $('#user_nav li')
     @build()
     @bindEvents()
 
@@ -14,7 +15,7 @@ class Protoadmin.Layout.MainNav
     @toggleGroup($nestedActive) if $(window).width() > 767
 
   bindEvents: ->
-    @$el.find('> .btn').on('click', @toggle)
+    @$el.find('> .collapse-btn').on('click', @toggle)
     @$groups.on('click', @onToggleGroup)
     $(window).on('resize', @onResize)
     @$el.find('li:not(.has-nested) a').on('click', @onItemActivate)
@@ -30,6 +31,7 @@ class Protoadmin.Layout.MainNav
 
   deactivateActives: ->
     @$el.find('li.active').removeClass('active')
+    @$user.removeClass('active')
 
   activateItem: (item) ->
     item.addClass('active')

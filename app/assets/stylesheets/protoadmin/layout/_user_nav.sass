@@ -1,0 +1,43 @@
+#user_nav
+  +prefixme(user-select, none, webkit moz ms spec)
+  position: absolute
+  top: 0
+  right: 1em
+  z-index: 5
+
+#user_nav .nav
+  margin-left: 0
+  list-style: none
+  list-style-image: none
+
+#user_nav li
+  display: inline-block
+
+#user_nav ul > li
+  padding: 0
+
+#user_nav ul > li > a
+  font-size: 12px
+  display: block
+  text-decoration: none
+  padding: 0.25em 0.75em
+
+#user_nav ul > li > a:hover i
+  opacity: 0.8
+
+#user_nav ul > li i
+  font-size: 14px
+  opacity: 0.5
+
+#user_nav ul > li .label
+  top: 0
+  font-size: inherit
+
+#user_nav > ul > .active i
+  opacity: 0.8
+
+
+@media (max-width: 769px)
+  #user_nav > ul > li > a .text
+    display: none
+

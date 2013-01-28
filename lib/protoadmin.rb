@@ -1,5 +1,5 @@
 require 'haml-rails'
-require 'bootstrap-sass'
+require 'sass-rails'
 require 'jquery-rails'
 require 'font-awesome-sass-rails'
 require 'navigasmic'

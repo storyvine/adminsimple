@@ -3,6 +3,9 @@ Protoadmin::Engine.routes.draw do
   # Dashboard route
   root to: 'protoadmin/dashboard#index'
 
+  # Settings route
+  match 'settings' => 'protoadmin/settings#index'
+
   # Styleguide route
   match 'styleguide(/:action)' => 'protoadmin/styleguide#show', as: :styleguide
 
