@@ -1,21 +1,21 @@
-#main_nav
+#adminsimple_main_nav
   +prefixme(user-select, none, webkit moz ms spec)
   position: absolute
   width: 220px
   z-index: 4
 
-#main_nav a
+#adminsimple_main_nav a
   font-size: 12px
   display: block
   text-decoration: none
 
-#main_nav > ul
+#adminsimple_main_nav > ul
   margin: 0
   padding: 0
   width: 220px
   height: auto
 
-#main_nav > ul > li
+#adminsimple_main_nav > ul > li
   position: relative
   > a
     font-weight: normal
@@ -33,7 +33,7 @@
     margin: 0 1.5em 0 0
     padding: 3px 5px 2px
 
-#main_nav > ul > li.active
+#adminsimple_main_nav > ul > li.active
   box-shadow: 0 2px 4px rgba(black, 0.2) inset
   &:after
     color: white
@@ -48,7 +48,7 @@
   a
     background: transparent
 
-#main_nav > ul ul
+#adminsimple_main_nav > ul ul
   box-shadow: 0 0 3px rgba(black, 0.5) inset
   overflow: hidden
   margin: 0
@@ -63,13 +63,13 @@
   li:last-child a
     border-bottom: 0
 
-.animated #main_nav
+.animated #adminsimple_main_nav
   > ul
     +tranny(opacity 0.2s ease-in)
   > ul ul
     +tranny(all 0.2s ease-in)
 
-#main_nav > .collapse-btn
+#adminsimple_main_nav > .collapse-btn
   +prefixme(user-select, none, webkit moz ms spec)
   display: none
   position: absolute
@@ -79,31 +79,31 @@
 
 
 @media (max-width: 769px) and (min-width: 480px)
-  #main_nav > ul > li > a .text
+  #adminsimple_main_nav > ul > li > a .text
     display: none
-  #main_nav > ul
+  #adminsimple_main_nav > ul
     width: 40px
-  #main_nav > ul ul
+  #adminsimple_main_nav > ul ul
     opacity: 0.9
     position: absolute
     margin-top: -37px
     left: 40px
-  #main_nav > ul ul li a
+  #adminsimple_main_nav > ul ul li a
     border: 0
     padding: 0.75em
     &:hover
       color: white
 
 @media (max-width: 480px)
-  #main_nav
+  #adminsimple_main_nav
     position: relative
     width: 100%
-  #main_nav > .collapse-btn
+  #adminsimple_main_nav > .collapse-btn
     display: block
     cursor: pointer
-  #main_nav > ul > li > a .text
+  #adminsimple_main_nav > ul > li > a .text
     display: inline
-  #main_nav > ul
+  #adminsimple_main_nav > ul
     border-bottom: 0
     border-top: 0
     box-shadow: 0 4px 5px rgba(black, 0.3)
@@ -121,6 +121,6 @@
       margin-top: 0
       left: 0
       width: 100%
-  #main_nav > ul.open
+  #adminsimple_main_nav > ul.open
     opacity: 1
 

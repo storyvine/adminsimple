@@ -1,7 +1,7 @@
 module Adminsimple::Modules::WidgetBoxHelpers
 
   def widget_box(options = {}, &block)
-    options[:class] = options[:class] ? "#{options[:class]} widget-box" : 'widget-box'
+    options[:class] = options[:class] ? "#{options[:class]} adminsimple-widget-box" : 'adminsimple-widget-box'
 
     if options[:icon] == :checkbox
       options[:icon] = content_tag(:input, '', type: 'checkbox')

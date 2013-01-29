@@ -1,6 +1,6 @@
 Navigasmic.setup do |config|
 
-  config.builder main_nav: Navigasmic::Builder::ListBuilder do |builder|
+  config.builder adminsimple_navigasmic_main_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.wrapper_class = 'nav nav-list'
 
     builder.label_generator = proc do |label, options, has_link, has_nested|
@@ -24,8 +24,7 @@ Navigasmic.setup do |config|
     end
   end
 
-  config.builder user_nav: Navigasmic::Builder::ListBuilder do |builder|
-    builder.wrapper_class = 'nav btn-group'
+  config.builder adminsimple_navigasmic_user_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.has_nested_class = 'dropdown'
     builder.is_nested_class = 'dropdown-menu'
 

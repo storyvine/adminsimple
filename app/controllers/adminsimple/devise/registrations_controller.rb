@@ -2,8 +2,6 @@ class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsContro
 
   #skip_authorization_check
 
-  include Pjax
-
   layout :layout
 
   before_filter :authenticate!

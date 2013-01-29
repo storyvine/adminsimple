@@ -1,10 +1,10 @@
 class Adminsimple.Layout.MainNav
 
-  @el: '#main_nav'
+  @el: '#adminsimple_main_nav'
 
   constructor: ->
     @$el = $(@constructor.el)
-    @$user = $('#user_nav li')
+    @$user = $('#adminsimple_user_nav li')
     @build()
     @bindEvents()
 

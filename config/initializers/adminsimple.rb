@@ -42,14 +42,14 @@ Adminsimple.setup do |config|
   end
 
   Navigasmic.setup do |c|
-    c.semantic_navigation :adminsimple_main_nav do |n|
+    c.semantic_navigation :adminsimple_navigasmic_main_nav do |n|
       n.item n.t('adminsimple.main_nav.dashboard'), proc{ adminsimple.root_path }, icon: 'home'
       n.group n.t('adminsimple.main_nav.style_guide'), icon: 'info-sign', label: 1 do
         n.item n.t('adminsimple.main_nav.icons'), proc{ adminsimple.styleguide_path('icons') }, icon: 'list-ul'
       end
     end
 
-    c.semantic_navigation :adminsimple_user_nav do |n|
+    c.semantic_navigation :adminsimple_navigasmic_user_nav do |n|
       n.item n.t('adminsimple.user_nav.profile'), proc{ adminsimple.edit_registration_path }, icon: 'user'
       n.item n.t('adminsimple.user_nav.settings'), proc{ adminsimple.settings_path }, icon: 'cog'
       n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_admin_session_path }, icon: 'share-alt'
