@@ -6,7 +6,6 @@ require 'navigasmic'
 require 'devise'
 require 'simple_form'
 require 'crummy'
-require 'pjax_rails'
 
 require 'adminsimple/version'
 require 'adminsimple/rails'

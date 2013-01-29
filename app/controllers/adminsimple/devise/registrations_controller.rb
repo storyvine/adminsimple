@@ -15,7 +15,7 @@ class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsContro
   end
 
   def layout
-    pjax_request? ? 'adminsimple/pjax' : 'adminsimple/application'
+    'adminsimple/application'
   end
 
   def self.mimes_for_respond_to

@@ -7,9 +7,8 @@ class Adminsimple.Layout.Theme
 
   initialize: ->
     @document = $(document)
-    @body = $('body')
+    @html = $('html')
     @has_storage = typeof Storage != undefined
-    @set(localStorage.theme) if @has_storage and localStorage.theme
     @changed()
 
 
@@ -17,11 +16,11 @@ class Adminsimple.Layout.Theme
 
   get: ->
     return localStorage.theme if @has_storage and localStorage.theme
-    @body.attr('id').replace /adminsimple_/g, ''
+    @html.attr('id').replace /adminsimple_/g, ''
 
 
   set: (theme) ->
-    @body.attr 'id', "adminsimple_#{theme}"
+    @html.attr 'id', "adminsimple_#{theme}"
     localStorage.theme = theme if @has_storage
 
 
@@ -55,12 +54,10 @@ class Adminsimple.Layout.Theme
 
   addListeners: ->
     @document.on 'click', '#theme_controls input:radio', => @userInitiatedSetTheme arguments...
-    @document.on 'pjax:end.adminsimple_theme', => @changed arguments...
 
 
   removeListeners: ->
     @document.off 'click', '#theme_controls input:radio'
-    @document.off 'pjax:end.adminsimple_theme'
 
 
 jQuery -> new Adminsimple.Layout.Theme()

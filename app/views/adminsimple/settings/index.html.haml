@@ -4,10 +4,7 @@
 = widget_box class: 'nopadding', title: 'Admin Theme', icon: 'user' do
   #theme_controls.control-group
     .controls
-      %label.radio(for="check_dark" style="display: block; margin-bottom: 1em;")
-        %input#check_dark(type="radio" name="theme" value="dark") Dark
-      %label.radio(for="check_light" style="display: block; margin-bottom: 1em;")
-        %input#check_light(type="radio" name="theme" value="light") Light
-      %label.radio(for="check_simple" style="display: block;")
-        %input#check_simple(type="radio" name="theme" value="simple") Simple
+      - Adminsimple.configuration.themes.each do |theme|
+        %label.radio(for="check_#{theme}" style="display: block;")
+          %input#check_simple(type="radio" name="theme" value="#{theme}")= theme.to_s.titleize
 

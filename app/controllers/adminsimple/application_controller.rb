@@ -17,16 +17,8 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
   end
 
   def layout
-    return 'adminsimple/pjax' if pjax_request?
     return 'adminsimple/devise' if devise_controller?
     'adminsimple/application'
-  end
-
-  def set_pjax_url
-    super
-    response.headers['X-PJAX-DATA'] = {
-      body_class: "#{controller_name}_controller #{action_name}_action"
-    }.to_json
   end
 
   def create_body_class

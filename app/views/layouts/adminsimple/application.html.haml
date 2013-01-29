@@ -1,14 +1,24 @@
 !!!
-%html
+%html(id="adminsimple_#{Adminsimple.configuration.themes[0]}")
   %head
     %title= t('adminsimple.site_title')
     %meta{ charset: "UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = csrf_meta_tags
-    = stylesheet_link_tag 'adminsimple', 'adminsimple/styleguide'
-    = javascript_include_tag 'adminsimple'
-  %body{class: @body_class, id:"adminsimple_#{Adminsimple.configuration.theme}"}
+    :javascript
+      if(typeof Storage === undefined || !localStorage.theme) return;
+      document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);
 
+    = stylesheet_link_tag 'adminsimple', 'adminsimple/styleguide'
+    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides}" if Adminsimple.configuration.app_css_overrides
+
+  %body{class: @body_class}
     = render partial: "/adminsimple/layout/header"
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
+
+    - if Adminsimple.configuration.app_js_overrides
+      = javascript_include_tag 'adminsimple', "#{Adminsimple.configuration.app_js_overrides}"
+    - else
+      = javascript_include_tag 'adminsimple'
+

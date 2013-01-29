@@ -1,8 +1,16 @@
 Adminsimple.setup do |config|
 
-  # Set the theme
-  # can be dark, light, or simple or one that you provide.
-  config.theme = :dark
+  # Set the available themes
+  # dark, light, and simple are available as defaults
+  config.themes = [:dark, :light, :simple]
+
+  # Set the CSS overrides
+  # A path to a file in your project to override styles
+  # config.app_css_overrides = ''
+
+  # Set the JS overrides
+  # A path to a file in your project to override javascripts
+  # config.app_js_overrides = ''
 
   # Specify the layout order
   # You can reorder the default, include additional layout modules or remove unused/unsupported ones.

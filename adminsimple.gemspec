@@ -26,5 +26,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise'
   s.add_dependency 'simple_form'
   s.add_dependency 'crummy'
-  s.add_dependency 'pjax_rails'
 end
