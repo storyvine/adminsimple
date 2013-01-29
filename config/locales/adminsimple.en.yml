@@ -1,6 +1,6 @@
 en:
   adminsimple:
-    site_title: 'Adminsimple'
+    site_name: 'Adminsimple'
     user_nav:
       profile: 'Profile'
       settings: 'Settings'

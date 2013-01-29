@@ -44,3 +44,10 @@ provide additional navigation as well providing the devise and simple_form confi
 Licensed under the [MIT License](http://creativecommons.org/licenses/MIT/)
 
 Copyright 2013 [Mode Set](http://modeset.com/)
+
+## WIP
+- Only import a single style sheet and javascript file
+- Notes about creating a devise admin table
+- Figure out the top bar/buttons/breadcrumbs design pattern
+- Site name should be configured as an image or a title
+
