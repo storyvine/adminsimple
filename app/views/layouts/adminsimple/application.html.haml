@@ -8,7 +8,7 @@
     :javascript
       if(typeof Storage === undefined || !localStorage.theme) return;
       document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);
-    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'}", 'adminsimple/styleguide'
+    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'}"
 
   %body{class: @body_class}
     = render partial: "/adminsimple/layout/navbar"

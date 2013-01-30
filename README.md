@@ -46,7 +46,6 @@ Licensed under the [MIT License](http://creativecommons.org/licenses/MIT/)
 Copyright 2013 [Mode Set](http://modeset.com/)
 
 ## WIP
-- get rid of the styleguide.sass
 - Fix sign in
 - Fix up the generators
 - Site name should be configured as an image or a title
