@@ -1,6 +1,7 @@
 class Adminsimple::ApplicationController < Adminsimple.configuration.parent_controller.constantize
 
   protect_from_forgery
+  add_crumb "Home", "/"
 
   layout :layout
 

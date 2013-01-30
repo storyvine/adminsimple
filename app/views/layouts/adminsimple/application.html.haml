@@ -1,7 +1,7 @@
 !!!
 %html(id="adminsimple_#{Adminsimple.configuration.themes[0]}")
   %head
-    %title= t('adminsimple.site_title')
+    %title= t('adminsimple.site_name')
     %meta{ charset: "UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = csrf_meta_tags
@@ -13,7 +13,7 @@
     = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides}" if Adminsimple.configuration.app_css_overrides
 
   %body{class: @body_class}
-    = render partial: "/adminsimple/layout/header"
+    = render partial: "/adminsimple/layout/navbar"
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
 

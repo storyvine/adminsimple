@@ -2,12 +2,20 @@
   background: #ccc
 
 #adminsimple_light
-  #adminsimple_header
+  #adminsimple_navbar
     +bar-gradient(#ddd, #aaa)
     border-bottom: 1px solid #ddd
     box-shadow: 0 1px 0 rgba(black, 0.5)
     h1 a
       color: #333
+
+  #adminsimple_content,
+  #adminsimple_content > .filler
+    background: white
+
+  #adminsimple_page_header
+    background-color: darken(white, 5%)
+    border-bottom: 1px solid darken(white, 20%)
 
   #adminsimple_search input
     background-color: #eee
@@ -58,8 +66,4 @@
     li:hover a, li.active a
       color: #eee
       background-color: #383838
-
-  #adminsimple_content,
-  #adminsimple_content > .filler
-    background: white
 

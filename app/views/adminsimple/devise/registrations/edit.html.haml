@@ -1,4 +1,4 @@
-%h2 Edit Profile
+= page_header title: 'Edit Profile'
 
 = widget_box class: 'nopadding', title: 'Your Profile', icon: 'user' do
   = simple_form_for resource, as: resource_name, url: adminsimple.registration_path, remote: true, html: { method: :put, class: 'form-horizontal' } do |f|

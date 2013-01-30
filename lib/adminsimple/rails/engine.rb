@@ -8,6 +8,7 @@ module Adminsimple
       ActiveSupport.on_load :action_view do
         ActionView::Base.send :include, Adminsimple::ViewHelpers
         ActionView::Base.send :include, Adminsimple::Modules::WidgetBoxHelpers
+        ActionView::Base.send :include, Adminsimple::Modules::PageHeaderHelpers
       end
     end
 
