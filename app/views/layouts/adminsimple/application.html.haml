@@ -8,17 +8,11 @@
     :javascript
       if(typeof Storage === undefined || !localStorage.theme) return;
       document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);
-
-    = stylesheet_link_tag 'adminsimple', 'adminsimple/styleguide'
-    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides}" if Adminsimple.configuration.app_css_overrides
+    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'}", 'adminsimple/styleguide'
 
   %body{class: @body_class}
     = render partial: "/adminsimple/layout/navbar"
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
-
-    - if Adminsimple.configuration.app_js_overrides
-      = javascript_include_tag 'adminsimple', "#{Adminsimple.configuration.app_js_overrides}"
-    - else
-      = javascript_include_tag 'adminsimple'
+    = javascript_include_tag "#{Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'}"
 
