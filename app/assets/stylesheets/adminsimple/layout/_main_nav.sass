@@ -39,7 +39,7 @@
     color: white
     content: "\f0d9"
     font-family: 'FontAwesome'
-    font-size: 38px
+    font-size: 2em
     position: absolute
     overflow: hidden
     top: 0
@@ -78,7 +78,9 @@
   z-index: 100
 
 
-@media (max-width: 769px) and (min-width: 480px)
+@media (max-width: 769px)
+  #adminsimple_main_nav
+    width: auto
   #adminsimple_main_nav > ul > li > a .text
     display: none
   #adminsimple_main_nav > ul
@@ -97,7 +99,7 @@
 @media (max-width: 480px)
   #adminsimple_main_nav
     position: relative
-    width: 100%
+    width: auto
   #adminsimple_main_nav > .collapse-btn
     display: block
     cursor: pointer
