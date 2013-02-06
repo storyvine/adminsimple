@@ -1,6 +1,8 @@
 en:
   adminsimple:
     site_name: 'Adminsimple'
+    search_prompt: 'Search...'
+    sign_in_prompt:  'Sign in using your registered account:'
     user_nav:
       profile: 'Profile'
       settings: 'Settings'
@@ -18,6 +20,11 @@ en:
       maps: 'Maps'
       calendars: 'Calendars'
       graphs: 'Graphs'
+    headers:
+      password_change: 'Change Your Password'
+      forgot_password: 'Forgot Your Password?'
+      edit_profile: 'Edit Your Profile'
+      sign_in: 'Sign In'
 
   simple_form:
     "yes": 'Yes'

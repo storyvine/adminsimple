@@ -1,6 +1,6 @@
-= page_header title: 'Sign In'
+= page_header title: t('adminsimple.headers.sign_in')
 
-%p Sign in using your registered account:
+%p= t('adminsimple.sign_in_prompt')
 
 = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
   = f.error_notification
