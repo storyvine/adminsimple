@@ -6,8 +6,7 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = csrf_meta_tags
     :javascript
-      if(typeof Storage === undefined || !localStorage.theme) return;
-      document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);
+      if(typeof Storage !== undefined && localStorage.theme) {document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);}
     = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'}"
 
   %body{class: @body_class}
