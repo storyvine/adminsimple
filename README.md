@@ -45,9 +45,3 @@ Licensed under the [MIT License](http://creativecommons.org/licenses/MIT/)
 
 Copyright 2013 [Mode Set](http://modeset.com/)
 
-## WIP
-- Fix sign in
-- Fix up the generators
-- Site name should be configured as an image or a title
-- Notes about creating a devise admin table
-
