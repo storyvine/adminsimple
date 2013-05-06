@@ -7,7 +7,8 @@
     = csrf_meta_tags
     :javascript
       if(typeof Storage !== undefined && localStorage.theme) {document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);}
-    = stylesheet_link_tag "#{Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'}"
+    = stylesheet_link_tag 'adminsimple'
+    = stylesheet_link_tag Adminsimple.configuration.app_css_overrides if Adminsimple.configuration.app_css_overrides
 
   %body{class: @body_class}
     = render partial: "/adminsimple/layout/navbar"

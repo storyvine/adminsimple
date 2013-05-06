@@ -41,7 +41,7 @@ class @Adminsimple # singleton
       return true
 
   @currentControllerAndAction: ->
-    className = $('body').attr('class')
+    className = $('body').attr('class') || ''
     return [className.match(/([\w^_]+)_controller/i)?[1] || 'unknown', className.match(/([\w^_]+)_action/i)?[1] || 'unknown'].join('#')
 
   # wait until the page has loaded before turning on css transitions
