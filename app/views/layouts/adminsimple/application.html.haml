@@ -4,7 +4,7 @@
     %title= t('adminsimple.site_name')
     %meta{ charset: "UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
-    = yield :head
+    = render partial: "/adminsimple/layout/head"
     = csrf_meta_tags
     :javascript
       if(typeof Storage !== undefined && localStorage.theme) {document.querySelector('html').setAttribute('id', "adminsimple_" + localStorage.theme);}
