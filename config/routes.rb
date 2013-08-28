@@ -4,10 +4,10 @@ Adminsimple::Engine.routes.draw do
   root to: 'adminsimple/dashboard#index'
 
   # Settings route
-  match 'settings' => 'adminsimple/settings#index'
+  get 'settings' => 'adminsimple/settings#index'
 
   # Styleguide route
-  match 'styleguide(/:action)' => 'adminsimple/styleguide#show', as: :styleguide
+  get 'styleguide(/:action)' => 'adminsimple/styleguide#show', as: :styleguide
 
   # Devise routing
   devise_for Adminsimple.configuration.devise_model.to_s.pluralize.to_sym,
