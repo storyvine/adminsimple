@@ -7,7 +7,7 @@ Adminsimple::Engine.routes.draw do
   get 'settings' => 'adminsimple/settings#index'
 
   # Styleguide route
-  get 'styleguide(/:action)' => 'adminsimple/styleguide#show', as: :styleguide
+  get 'styleguide(/:view)' => 'adminsimple/styleguide#show', as: :styleguide
 
   # Devise routing
   devise_for Adminsimple.configuration.devise_model.to_s.pluralize.to_sym,
@@ -17,8 +17,7 @@ Adminsimple::Engine.routes.draw do
     module: :devise,
     controllers: {
       sessions: 'adminsimple/devise/sessions',
-      passwords: 'adminsimple/devise/passwords',
-      #registrations: 'adminsimple/devise/registrations',
+      passwords: 'adminsimple/devise/passwords'
     }
   devise_scope Adminsimple.configuration.devise_model do
     resource :registration,

@@ -1,14 +1,10 @@
-require 'haml-rails'
-require 'sass-rails'
-require 'normalize-rails'
-require 'jquery-rails'
-require 'font-awesome-sass-rails'
-require 'navigasmic'
 require 'devise'
 require 'simple_form'
+require 'navigasmic'
 require 'crummy'
 
 require 'adminsimple/version'
-require 'adminsimple/rails'
+require 'adminsimple/configuration'
 
-require 'adminsimple/core/configuration'
+require 'adminsimple/engine'
+

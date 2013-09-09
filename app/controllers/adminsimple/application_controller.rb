@@ -22,6 +22,10 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
     'adminsimple/application'
   end
 
+  def after_sign_in_path_for(resource)
+    resource.class.name == 'Admin' ? adminsimple.root_path : root_path
+  end
+
   def create_body_class
     @body_class = "#{controller_name}_controller #{action_name}_action"
   end

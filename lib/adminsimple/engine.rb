@@ -1,10 +1,8 @@
-require 'rails'
-
 module Adminsimple
   class Engine < ::Rails::Engine
     engine_name 'adminsimple'
 
-    initializer "adminsimple.view_helpers" do
+    initializer 'adminsimple.view_helpers' do
       ActiveSupport.on_load :action_view do
         ActionView::Base.send :include, Adminsimple::ViewHelpers
         ActionView::Base.send :include, Adminsimple::Modules::WidgetBoxHelpers

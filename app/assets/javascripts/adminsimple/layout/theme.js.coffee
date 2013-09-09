@@ -59,6 +59,5 @@ class Adminsimple.Layout.Theme
   removeListeners: ->
     @document.off 'click', '#theme_controls input:radio'
 
-
-jQuery -> new Adminsimple.Layout.Theme()
+#jQuery -> new Adminsimple.Layout.Theme()
 

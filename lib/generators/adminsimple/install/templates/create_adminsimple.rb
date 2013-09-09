@@ -45,13 +45,5 @@ class CreateAdminsimple < ActiveRecord::Migration
     # add_index :admins, :confirmation_token,   :unique => true
     # add_index :admins, :unlock_token,         :unique => true
     # add_index :admins, :authentication_token, :unique => true
-
-    if Rails.env.development?
-      puts "-- create admin user\n   -> admin@adminsimple.com:password"
-      unless Admin.find_by_email('admin@adminsimple.com')
-        Admin.create!(email: 'admin@adminsimple.com', first_name: 'Admin', last_name: 'User', password: 'password', password_confirmation: 'password')
-      end
-    end
-
   end
 end

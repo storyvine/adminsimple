@@ -12,6 +12,7 @@ module Adminsimple
       def create_theme_sass
         template "dark.sass", "app/assets/components/admin/themes/_#{file_name}.sass"
       end
+
     end
   end
 end

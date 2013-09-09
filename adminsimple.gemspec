@@ -17,14 +17,8 @@ Gem::Specification.new do |s|
 
   # Runtime Dependencies
   s.add_dependency 'railties', ['>= 3.2.5','< 5']
-  s.add_dependency 'haml-rails'
-  s.add_dependency 'sass-rails'
-  s.add_dependency 'normalize-rails'
-  s.add_dependency 'coffee-rails'
-  s.add_dependency 'font-awesome-sass-rails'
-  s.add_dependency 'jquery-rails'
   s.add_dependency 'navigasmic', '>= 1.0.5'
-  s.add_dependency 'devise'
+  s.add_dependency 'devise', '>= 2.1.0'
   s.add_dependency 'simple_form', '>= 2.1.0'
   s.add_dependency 'crummy'
 end

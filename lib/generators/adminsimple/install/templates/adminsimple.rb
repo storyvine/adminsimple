@@ -24,31 +24,31 @@ Adminsimple.setup do |config|
   # You can set the parent controller to something if ActionController::Base doesn't do everything you want.
   config.parent_controller = 'ActionController::Base'
 
-  #Devise.setup do |c|
-  #  require 'devise/orm/active_record'
-  #
-  #  c.router_name = :protoadmin
-  #  c.parent_controller = 'Adminsimple::ApplicationController'
-  #  c.mailer_sender = "admin@protoadmin.com"
-  #  c.case_insensitive_keys = [:email]
-  #  c.strip_whitespace_keys = [:email]
-  #  c.skip_session_storage = [:http_auth]
-  #  c.stretches = Rails.env.test? ? 1 : 10
-  #  c.http_authenticatable = true
-  #  c.scoped_views = true
-  #  c.reconfirmable = true
-  #  c.reset_password_within = 6.hours
-  #  c.sign_out_via = :get
-  #end
+  Devise.setup do |c|
+    require 'devise/orm/active_record'
+
+    c.router_name = :adminsimple
+    c.parent_controller = 'Adminsimple::ApplicationController'
+    c.mailer_sender = "admin@adminsimple.com"
+    c.case_insensitive_keys = [:email]
+    c.strip_whitespace_keys = [:email]
+    c.skip_session_storage = [:http_auth]
+    c.stretches = Rails.env.test? ? 1 : 10
+    c.http_authenticatable = true
+    c.scoped_views = true
+    c.reconfirmable = true
+    c.reset_password_within = 6.hours
+    c.sign_out_via = :get
+  end
 
   Navigasmic.setup do |c|
-    #c.semantic_navigation :protoadmin_main_nav do |n|
+    #c.semantic_navigation :adminsimple_main_nav do |n|
     #end
     #
-    #c.semantic_navigation :protoadmin_user_nav do |n|
-    #  n.item n.t('protoadmin.user_nav.profile'), proc{ simpleadmin.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
-    #  n.item n.t('protoadmin.user_nav.settings'), '#', class: 'btn', icon: 'cog'
-    #  #n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_session_path(Protoadmin.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
+    #c.semantic_navigation :adminsimple_user_nav do |n|
+    #  n.item n.t('adminsimple.user_nav.profile'), proc{ simpleadmin.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
+    #  n.item n.t('adminsimple.user_nav.settings'), '#', class: 'btn', icon: 'cog'
+    #  #n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_session_path(Adminsimple.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
     #end
   end
 

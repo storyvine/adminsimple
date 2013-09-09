@@ -4,15 +4,11 @@ module Adminsimple
   class Configuration
     include Singleton
 
-    cattr_accessor :themes,
-                   :layout,
-                   :devise_model,
-                   :parent_controller,
-                   :app_css_overrides,
-                   :app_js_overrides
+    cattr_accessor :themes, :layout, :devise_model, :parent_controller,
+                   :app_css_overrides, :app_js_overrides
 
-    @@theme = :light
-    @@layout = [:header, :search, :user_nav, :main_nav, :content]
+    @@themes = [:dark, :light, :simple]
+    @@layout = [:user_nav, :main_nav, :search, :content]
     @@devise_model = :admin
     @@parent_controller = 'ActionController::Base'
   end
