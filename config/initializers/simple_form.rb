@@ -1,60 +1,26 @@
-SimpleForm.setup do |config|
+# http://stackoverflow.com/questions/14972253/simpleform-default-input-class
+# https://github.com/plataformatec/simple_form/issues/316
 
-  #config.wrappers :default, :class => :input,
-  #  :hint_class => :field_with_hint, :error_class => :field_with_errors do |b|
-  #
-  #  b.use :html5
-  #  b.use :placeholder
-  #  b.optional :maxlength
-  #  b.optional :pattern
-  #  b.optional :min_max
-  #  b.optional :readonly
-  #
-  #  b.use :label_input
-  #  b.use :hint,  :wrap_with => { :tag => :span, :class => :hint }
-  #  b.use :error, :wrap_with => { :tag => :span, :class => :error }
-  #end
+inputs = %w[
+  CollectionSelectInput
+  DateTimeInput
+  FileInput
+  GroupedCollectionSelectInput
+  NumericInput
+  PasswordInput
+  RangeInput
+  StringInput
+  TextInput
+]
 
-  config.wrappers :bootstrap, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |ba|
-      ba.use :input
-      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+inputs.each do |input_type|
+  superclass = "SimpleForm::Inputs::#{input_type}".constantize
+
+  new_class = Class.new(superclass) do
+    def input_html_classes
+      super.push('form-control')
     end
   end
 
-  config.wrappers :prepend, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |input|
-      input.wrapper :tag => 'div', :class => 'input-prepend' do |prepend|
-        prepend.use :input
-      end
-      input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
-      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-    end
-  end
-
-  config.wrappers :append, :tag => 'div', :class => "control-group", :error_class => 'error' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.use :label
-    b.wrapper :tag => 'div', :class => 'controls' do |input|
-      input.wrapper :tag => 'div', :class => 'input-append' do |append|
-        append.use :input
-      end
-      input.use :hint,  :wrap_with => { :tag => 'span', :class => 'help-block' }
-      input.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-    end
-  end
-
-  config.wrappers :checkbox, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
-    b.wrapper :tag => 'div', :class => 'controls' do |ba|
-      ba.use :label_input
-    end
-  end
+  Object.const_set(input_type, new_class)
 end

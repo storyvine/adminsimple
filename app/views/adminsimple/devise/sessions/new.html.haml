@@ -1,17 +1,15 @@
-= page_header title: t('adminsimple.headers.sign_in')
-
+%h2= t('adminsimple.headers.sign_in')
 %p= t('adminsimple.sign_in_prompt')
 
-= simple_form_for resource, as: resource_name, url: adminsimple.send(:"#{resource_name}_session_path") do |f|
+= simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :email, label: false, required: false, autofocus: true, wrapper: :prepend do
-      = f.input_field :email, placeholder: 'Email Address'
-    = f.input :password, label: false, required: false, wrapper: :prepend do
-      = f.input_field :password, placeholder: 'Password'
-
+    = f.input :email, label: false, required: false, autofocus: true, placeholder: "Password"
+    = f.input :password, label: false, required: false, placeholder: "Password"
   .form-actions
-    = f.input :remember_me, as: :boolean, wrapper: :checkbox if devise_mapping.rememberable?
+    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
     = f.button :submit, "Sign in"
+
+%br/
 
 = render 'adminsimple/devise/shared/links'

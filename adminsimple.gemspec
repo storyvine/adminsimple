@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise', '>= 2.1.0'
   s.add_dependency 'simple_form', '>= 2.1.0'
   s.add_dependency 'crummy'
+  s.add_dependency 'font-awesome-sass-rails'
 end

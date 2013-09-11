@@ -1,7 +1,5 @@
 class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsController
 
-  #skip_authorization_check
-
   layout :layout
 
   before_filter :authenticate!

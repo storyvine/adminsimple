@@ -1,12 +1,10 @@
 en:
-en:
   adminsimple:
     site_name: 'Adminsimple'
     search_prompt: 'Search...'
     sign_in_prompt:  'Sign in using your registered account:'
     user_nav:
       profile: 'Profile'
-      settings: 'Settings'
       sign_out: 'Sign Out'
     main_nav:
       home: 'Home'
@@ -17,10 +15,6 @@ en:
       elements: 'Elements'
       messages: 'Messages'
       icons: 'Icons'
-      galleries: 'Galleries'
-      maps: 'Maps'
-      calendars: 'Calendars'
-      graphs: 'Graphs'
     headers:
       password_change: 'Change Your Password'
       forgot_password: 'Forgot Your Password?'

@@ -1,10 +1,10 @@
 Navigasmic.setup do |config|
 
-  config.builder adminsimple_navigasmic_main_nav: Navigasmic::Builder::ListBuilder do |builder|
+  config.builder adminsimple_main_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.wrapper_class = 'nav nav-list'
 
     builder.label_generator = proc do |label, options, has_link, has_nested|
-      label << "<span class='label'>#{options.delete(:label)}</span>".html_safe if options.has_key?(:label)
+      label << "<span class='label label-default'>#{options.delete(:label)}</span>".html_safe if options.has_key?(:label)
       if !has_nested || has_link
         label = "<span class='text'>#{label}</span>"
         options.has_key?(:icon) ? "<i class='icon icon-#{options.delete(:icon)}'></i>#{label}".html_safe : label
@@ -24,7 +24,7 @@ Navigasmic.setup do |config|
     end
   end
 
-  config.builder adminsimple_navigasmic_user_nav: Navigasmic::Builder::ListBuilder do |builder|
+  config.builder adminsimple_user_nav: Navigasmic::Builder::ListBuilder do |builder|
     builder.has_nested_class = 'dropdown'
     builder.is_nested_class = 'dropdown-menu'
 

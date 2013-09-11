@@ -43,12 +43,19 @@ Adminsimple.setup do |config|
 
   Navigasmic.setup do |c|
     #c.semantic_navigation :adminsimple_main_nav do |n|
+    #  n.item n.t('adminsimple.main_nav.dashboard'), proc{ adminsimple.root_path }, icon: 'home'
+    #  n.group n.t('adminsimple.main_nav.style_guide'), icon: 'info-sign', label: 8 do
+    #    n.item n.t('adminsimple.main_nav.forms'), proc{ adminsimple.styleguide_path('forms') }, icon: 'th-list'
+    #    n.item n.t('adminsimple.main_nav.tables'), proc{ adminsimple.styleguide_path('tables') }, icon: 'th'
+    #    n.item n.t('adminsimple.main_nav.elements'), proc{ adminsimple.styleguide_path('elements') }, icon: 'briefcase'
+    #    n.item n.t('adminsimple.main_nav.messages'), proc{ adminsimple.styleguide_path('messages') }, icon: 'warning-sign'
+    #    n.item n.t('adminsimple.main_nav.icons'), proc{ adminsimple.styleguide_path('icons') }, icon: 'list-ul'
+    #  end
     #end
     #
     #c.semantic_navigation :adminsimple_user_nav do |n|
     #  n.item n.t('adminsimple.user_nav.profile'), proc{ simpleadmin.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
-    #  n.item n.t('adminsimple.user_nav.settings'), '#', class: 'btn', icon: 'cog'
-    #  #n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_session_path(Adminsimple.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
+    #  n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_session_path(Adminsimple.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
     #end
   end
 

@@ -13,7 +13,7 @@ module Adminsimple::Modules::WidgetBoxHelpers
       labels = options[:label].map { |key, value| content_tag(:span, value, class: "label label-#{key}") }
       options[:label] = labels.join('').html_safe
     elsif options[:label].present?
-      options[:label] = content_tag(:span, options[:label], class: 'label')
+      options[:label] = content_tag(:span, options[:label], class: 'label label-default')
     end
 
     locals = {content: capture(&block), title: options.delete(:title), icon: options.delete(:icon), label: options.delete(:label)}

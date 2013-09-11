@@ -1,7 +1,7 @@
-%h2 Table Examples
+= page_header title: "Table Examples"
 
 = widget_box title: 'Static table', icon: 'th', class: 'nopadding' do
-  %table.table.table-bordered.table-striped
+  %table.table.table-striped
     %thead
       %tr
         %th Column name
@@ -41,8 +41,8 @@
         %td Row 4
 
 
-= widget_box title: 'Static table with checkboxes', icon: :checkbox, class: 'nopadding', label: 6 do
-  %table.table.table-bordered.table-striped.with-check
+= widget_box title: 'Static table with checkboxes', icon: :checkbox, class: 'nopadding', label: 16 do
+  %table.table.table-striped
     %thead
       %tr
         %th
@@ -97,7 +97,7 @@
 
 
 = widget_box title: 'Static table with checkboxes in box with padding', icon: 'th', label: {info: 'Featured'} do
-  %table.table.table-bordered.table-striped.with-check
+  %table.table.table-bordered.table-striped
     %thead
       %tr
         %th
@@ -152,7 +152,7 @@
 
 
 = widget_box title: 'Dynamic table', icon: 'th', class: 'nopadding' do
-  %table.table.table-bordered{rel: 'datatable'}
+  %table.table{rel: 'datatable'}
     %thead
       %tr
         %th Rendering engine

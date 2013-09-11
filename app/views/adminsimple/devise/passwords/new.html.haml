@@ -1,9 +1,8 @@
-= page_header title: t('adminsimple.headers.forgot_password')
+%h2= t('adminsimple.headers.forgot_password')
 
 = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   .form-inputs
-    = f.input :email, label: false, required: false, autofocus: true, wrapper: :prepend do
-      = f.input_field :email, placeholder: 'Email Address'
+    = f.input :email, label: false, required: false, autofocus: true, placeholder: 'Email Address'
 
   .form-actions
     = f.button :submit, 'Send Instructions', class: 'btn-inverse btn-large'

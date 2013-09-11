@@ -1,16 +1,38 @@
-Devise.setup do |config|
+module Devise
+  module Controllers
+    module UrlHelpers
 
-  config.mailer_sender = "info@adminsimple.com"
+      def self.generate_helpers!(routes=nil)
+        routes ||= begin
+          mappings = Devise.mappings.values.map(&:used_helpers).flatten.uniq
+          Devise::URL_HELPERS.slice(*mappings)
+        end
 
-  require 'devise/orm/active_record'
+        routes.each do |module_name, actions|
+          [:path, :url].each do |path_or_url|
+            actions.each do |action|
+              action = action ? "#{action}_" : ""
+              method = "#{action}#{module_name}_#{path_or_url}"
 
-  config.case_insensitive_keys = [ :email ]
-  config.strip_whitespace_keys = [ :email ]
-  config.skip_session_storage = [:http_auth]
-  config.stretches = Rails.env.test? ? 1 : 10
-  config.reconfirmable = true
-  config.password_length = 8..128
-  config.reset_password_within = 6.hours
-  config.sign_out_via = :delete
+              class_eval <<-URL_HELPERS, __FILE__, __LINE__ + 1
+                def #{method}(resource_or_scope, *args)
+                  scope = Devise::Mapping.find_scope!(resource_or_scope)
+                  puts scope
+                  if scope == Adminsimple.configuration.devise_model
+                    adminsimple.send("#{action}\#{scope}_#{module_name}_#{path_or_url}", *args)
+                  else
+                    _devise_route_context.send("#{action}\#{scope}_#{module_name}_#{path_or_url}", *args)
+                  end
+                end
+              URL_HELPERS
+            end
+          end
+        end
+      end
 
+      remove_helpers!
+      generate_helpers!(Devise::URL_HELPERS)
+
+    end
+  end
 end

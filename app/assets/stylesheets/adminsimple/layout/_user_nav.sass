@@ -1,43 +1,34 @@
-#adminsimple_user_nav
+#user_nav
   +prefixme(user-select, none, webkit moz ms spec)
   position: absolute
   top: 0
   right: 1em
   z-index: 5
-
-#adminsimple_user_nav ul
-  margin: 1em 0 1em 0
-  list-style: none
-  list-style-image: none
-
-#adminsimple_user_nav li
-  display: inline-block
-
-#adminsimple_user_nav ul > li
-  padding: 0
-
-#adminsimple_user_nav ul > li > a
-  font-size: 12px
-  display: block
-  text-decoration: none
-  padding: 0.25em 0.75em
-
-#adminsimple_user_nav ul > li > a:hover i
-  opacity: 0.8
-
-#adminsimple_user_nav ul > li i
-  font-size: 14px
-  opacity: 0.5
-
-#adminsimple_user_nav ul > li .label
-  top: 0
-  font-size: inherit
-
-#adminsimple_user_nav > ul > .active i
-  opacity: 0.8
-
+  ul
+    margin: 27px 0 0
+    list-style: none
+    list-style-image: none
+  li
+    display: inline-block
+  > ul > li
+    padding: 0
+    i
+      font-size: 14px
+      opacity: 0.5
+    .label
+      top: 0
+      font-size: inherit
+    .active i
+      opacity: 0.8
+    > a
+      font-size: 12px
+      display: block
+      text-decoration: none
+      padding: 0.25em 0.75em
+    > a:hover i
+      opacity: 0.8
 
 @media (max-width: 769px)
-  #adminsimple_user_nav > ul > li > a .text
+  #user_nav a .text
     display: none
 

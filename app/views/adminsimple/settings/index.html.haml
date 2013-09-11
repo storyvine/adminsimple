@@ -1,9 +1,0 @@
-= page_header
-
-= widget_box title: 'Admin Theme', icon: 'user' do
-  #theme_controls.control-group
-    .controls
-      - Adminsimple.configuration.themes.each do |theme|
-        %label.radio(for="check_#{theme}" style="display: block;")
-          %input#check_simple(type="radio" name="theme" value="#{theme}")= theme.to_s.titleize
-

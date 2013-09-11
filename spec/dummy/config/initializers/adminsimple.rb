@@ -2,7 +2,7 @@ Adminsimple.setup do |config|
 
   # Set the available themes
   # dark, light, and simple are available as defaults
-  config.themes = [:dark, :light, :simple]
+  config.theme = :simple
 
   # Set the CSS overrides
   # A path to a file in your project to override styles
@@ -27,7 +27,7 @@ Adminsimple.setup do |config|
   Devise.setup do |c|
     require 'devise/orm/active_record'
 
-    c.router_name = :adminsimple
+    #c.router_name = :adminsimple
     c.parent_controller = 'Adminsimple::ApplicationController'
     c.mailer_sender = "admin@adminsimple.com"
     c.case_insensitive_keys = [:email]
@@ -51,7 +51,6 @@ Adminsimple.setup do |config|
 
     c.semantic_navigation :adminsimple_navigasmic_user_nav do |n|
       n.item n.t('adminsimple.user_nav.profile'), proc{ adminsimple.edit_registration_path }, icon: 'user'
-      n.item n.t('adminsimple.user_nav.settings'), proc{ adminsimple.settings_path }, icon: 'cog'
       n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_admin_session_path }, icon: 'share-alt'
     end
   end

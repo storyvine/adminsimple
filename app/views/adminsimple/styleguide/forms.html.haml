@@ -1,35 +1,35 @@
-%h2 Form Examples
+= page_header title: "Form Examples"
 
-= widget_box title: 'Text inputs', icon: 'align-justify', class: 'nopadding' do
+= widget_box title: 'Text inputs', icon: 'align-justify' do
   %form.form-horizontal{action: '#', method: 'get'}
     .form-inputs
-      .control-group
-        %label.control-label Normal text input
-        .controls
-          %input{type: 'text'}
-      .control-group
-        %label.control-label Password input
-        .controls
-          %input{type: 'password'}
-      .control-group
-        %label.control-label Input with description
-        .controls
-          %input{type: 'text'}
+      .form-group
+        %label.col-lg-3.control-label Normal text input
+        .col-lg-9
+          %input.form-control{type: 'text'}
+      .form-group
+        %label.col-lg-3.control-label Password input
+        .col-lg-9
+          %input.form-control{type: 'password'}
+      .form-group
+        %label.col-lg-3.control-label Input with description
+        .col-lg-9
+          %input.form-control{type: 'text'}
             %p.help-block This is a description
-      .control-group
-        %label.control-label Input with placeholder
-        .controls
-          %input{placeholder: 'This is a placeholder...', type: 'text'}
-      .control-group
-        %label.control-label Normal textarea
-        .controls
-          %textarea{style: 'height:50px'}
+      .form-group
+        %label.col-lg-3.control-label Input with placeholder
+        .col-lg-9
+          %input.form-control{placeholder: 'This is a placeholder...', type: 'text'}
+      .form-group
+        %label.col-lg-3.control-label Normal textarea
+        .col-lg-9
+          %textarea.form-control{style: 'height:50px'}
       %fieldset
         %legend Select, radio, checkboxes, and file inputs
-        .control-group
-          %label.control-label Select input
-          .controls
-            %select.chzn-select
+        .form-group
+          %label.col-lg-3.control-label Select input
+          .col-lg-9
+            %select.form-control.chzn-select
               %option First option
               %option Second option
               %option Third option
@@ -38,10 +38,10 @@
               %option Sixth option
               %option Seventh option
               %option Eighth option
-        .control-group
-          %label.control-label Multiple Select input
-          .controls
-            %select.chzn-select{multiple: 'multiple'}
+        .form-group
+          %label.col-lg-3.control-label Multiple Select input
+          .col-lg-9
+            %select.form-control.chzn-select{multiple: 'multiple'}
               %option First option
               %option{selected: 'selected'} Second option
               %option Third option
@@ -50,34 +50,35 @@
               %option Sixth option
               %option Seventh option
               %option Eighth option
-        .control-group
-          %label.control-label Radio inputs
-          .controls
-            %label
+        .form-group
+          %label.col-lg-3.control-label Radio inputs
+          .col-lg-9
+            %label.radio-inline
               %input{name: 'radios', type: 'radio'}
               First One
-            %label
+            %label.radio-inline
               %input{name: 'radios', type: 'radio'}
               Second One
-            %label
+            %label.radio-inline
               %input{name: 'radios', type: 'radio'}
               Third One
-        .control-group
-          %label.control-label Checkboxes
-          .controls
-            %label
+        .form-group
+          %label.col-lg-3.control-label Checkboxes
+          .col-lg-9
+            %label.checkbox-inline
               %input{name: 'radios', type: 'checkbox'}
               First One
-            %label
+            %label.checkbox-inline
               %input{name: 'radios', type: 'checkbox'}
               Second One
-            %label
+            %label.checkbox-inline
               %input{name: 'radios', type: 'checkbox'}
               Third One
-        .control-group
-          %label.control-label File upload input
-          .controls
-            %input{type: 'file'}/
+        .form-group
+          %label.col-lg-3.control-label File upload input
+          .col-lg-9
+            %input.form-control{type: 'file'}/
 
-    .form-actions
-      %button.btn.btn-primary{type: 'submit'} Save
+    .form-group
+      .col-lg-offset-2.col-lg-9
+        %button.btn.btn-primary{type: 'submit'} Save

@@ -7,4 +7,3 @@ require 'adminsimple/version'
 require 'adminsimple/configuration'
 
 require 'adminsimple/engine'
-

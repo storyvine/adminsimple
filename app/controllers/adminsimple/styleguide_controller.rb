@@ -1,6 +1,6 @@
 class Adminsimple::StyleguideController < Adminsimple::ApplicationController
 
-  #skip_authorization_check
+  add_crumb "Styleguide"
 
   def show
     if params[:view]
