@@ -6,10 +6,10 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = render partial: "/adminsimple/layout/head"
     = csrf_meta_tags
-    = stylesheet_link_tag Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'
+    = stylesheet_link_tag (Adminsimple.configuration.app_css_overrides ? Adminsimple.configuration.app_css_overrides : 'adminsimple'), 'data-turbolinks-track' => true, media: 'all'
 
   %body{class: @body_class}
     = render partial: "/adminsimple/layout/navbar"
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
-    = javascript_include_tag Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'
+    = javascript_include_tag (Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'), 'data-turbolinks-track' => true
