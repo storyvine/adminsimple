@@ -1,0 +1,7 @@
+.modal-dialog
+  .modal-content
+    .modal-header(class="#{content_for(:page_icon) ? content_for(:page_icon) : content_for(:page_icon)}")
+      %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
+      %h4.modal-title= content_for(:page_title)
+    #modal_body.modal-body
+      = yield

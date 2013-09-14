@@ -13,3 +13,4 @@
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
     = javascript_include_tag (Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'), 'data-turbolinks-track' => true
+    #modal.modal.fade(tabindex="-1" role="dialog" aria-hidden="true")

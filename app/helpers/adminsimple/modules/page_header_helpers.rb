@@ -4,7 +4,9 @@ module Adminsimple::Modules::PageHeaderHelpers
     options[:id] ||= "adminsimple_page_header"
     options[:title] ||= controller.controller_name.to_s
     content = block ? capture(&block) : nil
-    locals = {content: content, title: options.delete(:title)}
+    locals = {content: content, title: options.delete(:title), icon: options.delete(:icon)}
+    content_for(:page_title, locals[:title])
+    content_for(:page_icon, locals[:icon])
     content_tag(:div, render(partial: 'adminsimple/modules/page_header', locals: locals), options)
   end
 

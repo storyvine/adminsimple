@@ -2,7 +2,7 @@ class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsContro
 
   layout :layout
 
-  before_filter :authenticate!
+  before_filter :authenticate!, :add_crumbs
 
   private
 
@@ -16,6 +16,10 @@ class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsContro
 
   def self.mimes_for_respond_to
     {html: {}}
+  end
+
+  def add_crumbs
+    add_crumb 'Dashboard', adminsimple.root_path
   end
 
 end
