@@ -42,13 +42,13 @@ Adminsimple.setup do |config|
   #end
 
   Navigasmic.setup do |c|
-    #c.semantic_navigation :protoadmin_main_nav do |n|
+    #c.semantic_navigation :adminsimple_navigasmic_main_nav do |n|
     #end
     #
-    #c.semantic_navigation :protoadmin_user_nav do |n|
-    #  n.item n.t('protoadmin.user_nav.profile'), proc{ simpleadmin.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
-    #  n.item n.t('protoadmin.user_nav.settings'), '#', class: 'btn', icon: 'cog'
-    #  #n.item n.t('protoadmin.user_nav.sign_out'), proc{ protoadmin.destroy_session_path(Protoadmin.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
+    #c.semantic_navigation :adminsimple_navigasmic_user_nav do |n|
+    #  n.item n.t('adminsimple.user_nav.profile'), proc{ adminsimple.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
+    #  n.item n.t('adminsimple.user_nav.settings'), '#', class: 'btn', icon: 'cog'
+    #  #n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.destroy_session_path(Adminsimple.configuration.devise_model) }, class: 'btn', icon: 'share-alt'
     #end
   end
 
