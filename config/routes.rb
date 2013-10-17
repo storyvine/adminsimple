@@ -18,7 +18,7 @@ Adminsimple::Engine.routes.draw do
     controllers: {
       sessions: 'adminsimple/devise/sessions',
       passwords: 'adminsimple/devise/passwords',
-      #registrations: 'adminsimple/devise/registrations',
+      omniauth_callbacks: 'adminsimple/devise/omniauth_callbacks'
     }
   devise_scope Adminsimple.configuration.devise_model do
     resource :registration,
