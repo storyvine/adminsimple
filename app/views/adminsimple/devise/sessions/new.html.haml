@@ -1,7 +1,7 @@
 %h2= t('adminsimple.headers.sign_in')
 %p= t('adminsimple.sign_in_prompt')
 
-= simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+= simple_form_for resource, as: resource_name, url: session_path(resource_name), wrapper: :bootstrap3 do |f|
   = f.error_notification
   .form-inputs
     = f.input :email, label: false, required: false, autofocus: true, placeholder: "Email"

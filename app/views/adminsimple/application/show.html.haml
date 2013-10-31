@@ -1,0 +1,9 @@
+= page_header title: "#{resource_title} Details" do
+  - if controller.respond_to?(:edit)
+    = modal_for "Edit #{resource_title}", edit_resource_path(resource), class: "btn btn-primary icon-#{resource_icon}"
+
+= render 'details'
+
+- if !request.xhr? && controller.respond_to?(:destroy)
+  %hr
+  = link_to 'Delete', resource_path(resource), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }

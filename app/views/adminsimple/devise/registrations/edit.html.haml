@@ -1,13 +1,11 @@
 = page_header title: t('adminsimple.headers.edit_profile')
 
-= widget_box title: 'Your Profile', icon: 'user' do
-  -#= simple_form_for resource, as: resource_name, url: adminsimple.registration_path, html: { method: :put, class: 'form-horizontal' } do |f|
-  = simple_form_for resource, as: resource_name, url: adminsimple.registration_path, wrapper: :bootstrap3_horizontal, html: { class: "form-horizontal", method: :put } do |f|
-    .form-inputs
-      = f.input :email, autofocus: true
-      = f.input :password, hint: "(leave blank if you don't want to change it)", input_html: { autocomplete: 'off' }
-      = f.input :password_confirmation, input_html: { autocomplete: 'off' }
-      = f.input :current_password, hint: "(we need your current password to confirm your changes)", input_html: { autocomplete: 'off' }
+= simple_form_for resource, as: resource_name, url: adminsimple.registration_path, wrapper: :bootstrap3_horizontal, html: {class: "form-horizontal", method: :put} do |f|
+  .form-inputs
+    = f.input :email, autofocus: true
+    = f.input :password, hint: "(leave blank if you don't want to change it)", input_html: { autocomplete: 'off' }
+    = f.input :password_confirmation, input_html: { autocomplete: 'off' }
+    = f.input :current_password, hint: "(we need your current password to confirm your changes)", input_html: { autocomplete: 'off' }
 
-    .form-actions
-      = f.button :submit, 'Update'
+  .form-actions
+    = f.button :submit, 'Update'

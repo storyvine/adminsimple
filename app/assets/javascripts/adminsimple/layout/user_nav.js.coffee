@@ -1,4 +1,5 @@
 class Adminsimple.Layout.UserNav
+
   @el: '#adminsimple_user_nav'
 
   constructor: ->

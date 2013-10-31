@@ -1,12 +1,13 @@
+/*
+ *= require bootstrap
+ *= require font-awesome
+ */
+
+
 // mixins
 @import adminsimple/mixins/mixins
 
-// plugins
-//@import adminsimple/plugins/normalize
-@import adminsimple/plugins/font_awesome
-
 // modules
-@import adminsimple/modules/button
 @import adminsimple/modules/breadcrumb
 @import adminsimple/modules/widget_box
 
@@ -20,16 +21,119 @@
 @import adminsimple/layout/content
 
 // themes
-@import adminsimple/themes/dark
-@import adminsimple/themes/light
 @import adminsimple/themes/simple
 
 body
   margin: 0
+  font-family: "Helvetica Neue",​ Helvetica,​ Arial,​ sans-serif
+
+#adminsimple_simple
+  #adminsimple_navbar
+    background-color: #1b1b1b
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111))
+    background-image: -webkit-linear-gradient(top, #222222, #111111)
+    background-image: linear-gradient(to bottom, #222222, #111111)
+    background-repeat: repeat-x
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0)
+    border-color: #252525
+  #adminsimple_navbar h1
+    padding-left: 70px
+  #adminsimple_navbar h1 a
+    color: #aaa
+  #adminsimple_main_nav .collapse-btn
+    color: #fff
+  #adminsimple_user_nav a
+    color: #aaa
+  #adminsimple_page_header
+    background-color: transparent
+    border: 0
+    .adminsimple-title-column
+      width: 40%
+  .form-horizontal
+    label
+      &.required abbr
+        color: #f00
+        border-bottom: 0
+        cursor: default
+    label.boolean
+      float: none
+  table
+    .badge
+      line-height: 20px
+    .controls
+      width: 10px
+      white-space: nowrap
+      a
+        display: inline-block
+        padding: 2px 3px 0 1px
+        width: 24px
+        height: 24px
+        &:before
+          width: 16px
+          height: 16px
+          margin-right: -3px !important
+  .modal-body
+    #adminsimple_page_header
+      display: none
+    .modal-footer
+      padding: 19px 20px 0
+      margin: 15px -20px 0
+    textarea
+      resize: vertical
+
+  i[class^="icon-"],
+  i[class*=" icon-"]
+    font-family: "FontAwesome"
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before
+    font-family: "FontAwesome"
+  [class^="icon-"],
+  [class*=" icon-"]
+    font-family: "Helvetica Neue",​Helvetica,​Arial,​sans-serif
+    display: inline-block
+    &.btn
+      &:before
+        font-family: "FontAwesome"
+        margin-right: 6px
+  dt, dd
+    line-height: 1.828571429
+
+
+@media (max-width: 991px)
+  #adminsimple_simple
+    .form-horizontal label
+      float: none
+
+@media (max-width: 769px)
+  #adminsimple_simple
+    #adminsimple_page_header .adminsimple-title-column
+      width: 100%
+
+@media (max-width: 480px)
+  #adminsimple_simple
+    .btn.btn-danger
+      width: 100%
+
+
+// fix bootstrap stuff
+body.modal-open
+  margin-right: 0
+
+.form-control.datetime,
+.form-control.date,
+.form-control.time
+  width: auto
+  display: inline-block
+
+.input-group
+  width: 1px
+  float: left
+  margin-right: 10px
 
 .form-horizontal
   .form-actions
     text-align: right
+
 .help-block
   margin-top: 0
   margin-bottom: 0
