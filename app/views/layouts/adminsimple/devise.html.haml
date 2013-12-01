@@ -10,7 +10,7 @@
     = stylesheet_link_tag 'adminsimple'
     = stylesheet_link_tag Adminsimple.configuration.app_css_overrides if Adminsimple.configuration.app_css_overrides
 
-  %body.sign-in.devise_controller
+  %body{class: "sign-in devise_controller #{@body_class}"}
     = render partial: '/adminsimple/layout/navbar'
     #sign_in= yield
     = javascript_include_tag "#{Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'}"
