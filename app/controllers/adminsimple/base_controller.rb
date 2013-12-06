@@ -6,7 +6,7 @@ class Adminsimple::BaseController < Adminsimple::ApplicationController
 
   append_before_filter :add_crumbs
 
-  helper_method :collection_title, :resource_title, :resource_icon
+  helper_method :collection_title, :resource_title, :resource_icon, :collection_action_path
 
   def create
     create! do |success, failure|
@@ -48,6 +48,17 @@ class Adminsimple::BaseController < Adminsimple::ApplicationController
 
   def add_crumbs
     add_crumb(collection_title, collection_path)
+  end
+  
+  def collection_action_path(action = nil, optional = nil)
+    arr = []
+    arr << action if action
+    arr += association_chain
+    if optional
+      arr << resource if resource_instance_name.to_s.pluralize != optional.to_s
+      arr << optional
+    end
+    url_for(arr)
   end
 
 end
