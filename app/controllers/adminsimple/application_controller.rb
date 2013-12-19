@@ -5,7 +5,9 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
 
   layout :layout
 
-  before_filter :authenticate!, :create_body_class
+  before_filter :authenticate!
+
+  helper_method :body_class
 
   private
 
@@ -22,8 +24,8 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
     'adminsimple/application'
   end
 
-  def create_body_class
-    @body_class = "#{controller_name}_controller #{action_name}_action"
+  def body_class
+    "#{controller_name}_controller #{action_name}_action"
   end
 
 end

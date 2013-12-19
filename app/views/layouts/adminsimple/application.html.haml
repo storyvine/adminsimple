@@ -11,7 +11,7 @@
     = stylesheet_link_tag 'adminsimple'
     = stylesheet_link_tag Adminsimple.configuration.app_css_overrides if Adminsimple.configuration.app_css_overrides
 
-  %body{class: @body_class}
+  %body{class: (body_class if respond_to?(:body_class))}
     = render partial: "/adminsimple/layout/navbar"
     - Adminsimple.configuration.layout.each do |partial|
       = render partial: "/adminsimple/layout/#{partial}"
