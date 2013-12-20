@@ -25,7 +25,11 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
   end
 
   def body_class
-    "#{controller_name}_controller #{action_name}_action"
+    if defined?(super)
+      super
+    else
+      "#{controller_name}_controller #{action_name}_action"
+    end
   end
 
 end
