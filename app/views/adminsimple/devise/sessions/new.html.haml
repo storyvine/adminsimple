@@ -6,7 +6,7 @@
   = f.error_notification
   .form-inputs
     = f.input :email, label: false, required: false, autofocus: true, wrapper: :prepend do
-      = f.input_field :email, placeholder: 'Email Address', input_html: { type: :email }
+      = f.input_field :email, placeholder: 'Email Address', type: :email
     = f.input :password, label: false, required: false, wrapper: :prepend do
       = f.input_field :password, placeholder: 'Password'
 
