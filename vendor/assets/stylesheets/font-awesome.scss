@@ -1,27 +1,6 @@
 /*!
- *  Font Awesome 4.0.1
- *  the iconic font designed for Bootstrap
- *  ------------------------------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation can be
- *  found at http://fontawesome.io.  Stay up to date on Twitter at
- *  http://twitter.com/fontawesome.
- *
- *  License
- *  ------------------------------------------------------------------------------
- *  - The Font Awesome font is licensed under SIL OFL 1.1 -
- *    http://scripts.sil.org/OFL
- *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
- *    http://opensource.org/licenses/mit-license.html
- *  - Font Awesome documentation licensed under CC BY 3.0 -
- *    http://creativecommons.org/licenses/by/3.0/
- *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
- *    "Font Awesome by Dave Gandy - http://fontawesome.io"
- *
- *  Author - Dave Gandy
- *  ------------------------------------------------------------------------------
- *  Email: dave@fontawesome.io
- *  Twitter: http://twitter.com/davegandy
- *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
@@ -417,7 +396,7 @@
 .icon-check-square-o:before {
   content: "\f046";
 }
-.icon-move:before {
+.icon-arrows:before {
   content: "\f047";
 }
 .icon-step-backward:before {
@@ -502,10 +481,10 @@
 .icon-share:before {
   content: "\f064";
 }
-.icon-resize-full:before {
+.icon-expand:before {
   content: "\f065";
 }
-.icon-resize-small:before {
+.icon-compress:before {
   content: "\f066";
 }
 .icon-plus:before {
@@ -572,10 +551,10 @@
 .icon-folder-open:before {
   content: "\f07c";
 }
-.icon-resize-vertical:before {
+.icon-arrows-v:before {
   content: "\f07d";
 }
-.icon-resize-horizontal:before {
+.icon-arrows-h:before {
   content: "\f07e";
 }
 .icon-bar-chart-o:before {
@@ -720,10 +699,11 @@
 .icon-briefcase:before {
   content: "\f0b1";
 }
-.icon-fullscreen:before {
+.icon-arrows-alt:before {
   content: "\f0b2";
 }
-.icon-group:before {
+.icon-group:before,
+.icon-users:before {
   content: "\f0c0";
 }
 .icon-chain:before,
@@ -754,7 +734,7 @@
 .icon-square:before {
   content: "\f0c8";
 }
-.icon-reorder:before {
+.icon-bars:before {
   content: "\f0c9";
 }
 .icon-list-ul:before {
@@ -891,10 +871,10 @@
 .icon-file-text-o:before {
   content: "\f0f6";
 }
-.icon-building:before {
+.icon-building-o:before {
   content: "\f0f7";
 }
-.icon-hospital:before {
+.icon-hospital-o:before {
   content: "\f0f8";
 }
 .icon-ambulance:before {
@@ -979,12 +959,6 @@
 }
 .icon-folder-open-o:before {
   content: "\f115";
-}
-.icon-expand-o:before {
-  content: "\f116";
-}
-.icon-collapse-o:before {
-  content: "\f117";
 }
 .icon-smile-o:before {
   content: "\f118";
@@ -1100,16 +1074,16 @@
 .icon-anchor:before {
   content: "\f13d";
 }
-.icon-unlock-o:before {
+.icon-unlock-alt:before {
   content: "\f13e";
 }
 .icon-bullseye:before {
   content: "\f140";
 }
-.icon-ellipsis-horizontal:before {
+.icon-ellipsis-h:before {
   content: "\f141";
 }
-.icon-ellipsis-vertical:before {
+.icon-ellipsis-v:before {
   content: "\f142";
 }
 .icon-rss-square:before {
@@ -1360,4 +1334,7 @@
 .icon-turkish-lira:before,
 .icon-try:before {
   content: "\f195";
+}
+.icon-plus-square-o:before {
+  content: "\f196";
 }
