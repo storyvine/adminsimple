@@ -1,6 +1,6 @@
 = page_header title: t('adminsimple.headers.edit_profile')
 
-= simple_form_for resource, as: resource_name, url: adminsimple.registration_path, wrapper: :bootstrap3_horizontal, html: {class: "form-horizontal", method: :put} do |f|
+= simple_form_for resource, as: resource_name, url: registration_path(resource), wrapper: :bootstrap3_horizontal, html: {class: "form-horizontal", method: :put} do |f|
   .form-inputs
     = f.input :email, autofocus: true
     = f.input :password, hint: "(leave blank if you don't want to change it)", input_html: { autocomplete: 'off' }

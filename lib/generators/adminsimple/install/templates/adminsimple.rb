@@ -6,57 +6,38 @@ Adminsimple.setup do |config|
 
   # Set the CSS overrides
   # A path to a file in your project to override styles
-  #config.app_css_overrides = 'manage'
+  #config.app_css_overrides = 'admin'
 
   # Set the JS overrides
   # A path to a file in your project to override javascripts
-  #config.app_js_overrides = 'manage'
+  #config.app_js_overrides = 'admin'
 
   # Specify the layout order
   # You can reorder the default, include additional layout modules or remove unused/unsupported ones.
   config.layout  = [:user_nav, :main_nav, :content]
 
-  # Specify the devise model
-  # You can provide an alternate devise model if you're using something other than admin.
-  config.devise_model = :admin
-
   # Parent controller
   # You can set the parent controller to something if ActionController::Base doesn't do everything you want.
   config.parent_controller = 'ActionController::Base'
 
-  Devise.setup do |c|
-    require 'devise/orm/active_record'
-
-    c.router_name = :adminsimple
-    c.parent_controller = 'Adminsimple::ApplicationController'
-    c.mailer_sender = "admin@adminsimple.com"
-    c.case_insensitive_keys = [:email]
-    c.strip_whitespace_keys = [:email]
-    c.skip_session_storage = [:http_auth]
-    c.stretches = Rails.env.test? ? 1 : 10
-    c.http_authenticatable = true
-    c.scoped_views = true
-    c.reconfirmable = true
-    c.reset_password_within = 6.hours
-    c.sign_out_via = :get
-    # c.secret_key = nil
-  end
-
   Navigasmic.setup do |c|
     c.semantic_navigation :adminsimple_main_nav do |n|
       n.item n.t('adminsimple.main_nav.dashboard'), proc{ adminsimple.root_path }, icon: 'home'
-      n.group n.t('adminsimple.main_nav.style_guide'), icon: 'info-sign', label: 5 do
-        n.item n.t('adminsimple.main_nav.forms'), proc{ adminsimple.styleguide_path('forms') }, icon: 'th-list'
-        n.item n.t('adminsimple.main_nav.tables'), proc{ adminsimple.styleguide_path('tables') }, icon: 'th'
-        n.item n.t('adminsimple.main_nav.elements'), proc{ adminsimple.styleguide_path('elements') }, icon: 'briefcase'
-        n.item n.t('adminsimple.main_nav.messages'), proc{ adminsimple.styleguide_path('messages') }, icon: 'exclamation-triangle'
-        n.item n.t('adminsimple.main_nav.icons'), proc{ adminsimple.styleguide_path('icons') }, icon: 'list-ul'
+      #n.item n.t('adminsimple.main_nav.clients'), proc{ clients_path }, icon: 'globe', highlights_on: [{controller: 'admin/clients'}]
+      if Rails.env.development?
+        n.group n.t('adminsimple.main_nav.style_guide'), icon: 'info-circle', label: 5 do
+          n.item n.t('adminsimple.main_nav.forms'), proc{ adminsimple.styleguide_path('forms') }, icon: 'th-list'
+          n.item n.t('adminsimple.main_nav.tables'), proc{ adminsimple.styleguide_path('tables') }, icon: 'th'
+          n.item n.t('adminsimple.main_nav.elements'), proc{ adminsimple.styleguide_path('elements') }, icon: 'briefcase'
+          n.item n.t('adminsimple.main_nav.messages'), proc{ adminsimple.styleguide_path('messages') }, icon: 'exclamation-triangle'
+          n.item n.t('adminsimple.main_nav.icons'), proc{ adminsimple.styleguide_path('icons') }, icon: 'list-ul'
+        end
       end
     end
 
     c.semantic_navigation :adminsimple_user_nav do |n|
-      n.item n.t('adminsimple.user_nav.profile'), proc{ adminsimple.edit_registration_path }, class: 'btn', icon: 'user', link_html: {rel: 'modal'}
-      n.item n.t('adminsimple.user_nav.sign_out'), proc{ adminsimple.send(:"destroy_#{Adminsimple.configuration.devise_model}_session_path") }, class: 'btn', icon: 'share'
+      n.item n.t('adminsimple.user_nav.profile'), proc{ main_app.edit_admin_registration_path }, class: 'btn', icon: 'user', link_html: { rel: 'modal' }
+      n.item n.t('adminsimple.user_nav.sign_out'), proc{ main_app.destroy_admin_session_path }, class: 'btn', icon: 'reply'
     end
   end
 
@@ -66,8 +47,8 @@ Adminsimple.setup do |config|
 
     c.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class: 'has-error',
       defaults: {
-      input_html: { class: 'default_class' }
-    } do |b|
+        input_html: { class: 'default_class' }
+      } do |b|
 
       b.use :html5
       b.use :min_max
@@ -104,8 +85,8 @@ Adminsimple.setup do |config|
 
     c.wrappers :group, tag: 'div', class: 'form-group', error_class: 'has-error',
       defaults: {
-      input_html: { class: 'default-class '}
-    }  do |b|
+        input_html: { class: 'default-class '}
+      }  do |b|
 
       b.use :html5
       b.use :min_max
@@ -135,5 +116,4 @@ Adminsimple.setup do |config|
 
     c.default_wrapper = :bootstrap3_horizontal
   end
-
 end

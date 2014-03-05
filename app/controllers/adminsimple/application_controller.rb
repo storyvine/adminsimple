@@ -9,11 +9,11 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
   protected
 
   def authenticate!
-    self.send("authenticate_#{Adminsimple.configuration.devise_model}!")
+    authenticate_admin!
   end
 
   def current_user
-    self.send("current_#{Adminsimple.configuration.devise_model}")
+    current_admin
   end
 
   def layout
@@ -24,10 +24,6 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
 
   def create_body_class
     @body_class = "#{controller_name}_controller #{action_name}_action"
-  end
-
-  def after_sign_in_path_for(resource)
-    resource.class.name == 'Admin' ? adminsimple.root_path : root_path
   end
 
 end

@@ -5,10 +5,9 @@
     %meta{ charset: "UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = csrf_meta_tags
-    = stylesheet_link_tag 'adminsimple'
-    = stylesheet_link_tag Adminsimple.configuration.app_css_overrides if Adminsimple.configuration.app_css_overrides
+    = stylesheet_link_tag Adminsimple.configuration.app_css_overrides || 'adminsimple'
+    = javascript_include_tag Adminsimple.configuration.app_js_overrides || 'adminsimple'
 
   %body.sign-in.devise_controller
     = render partial: '/adminsimple/layout/navbar'
     #sign_in= yield
-    = javascript_include_tag "#{Adminsimple.configuration.app_js_overrides ? Adminsimple.configuration.app_js_overrides : 'adminsimple'}"

@@ -9,10 +9,10 @@ class Adminsimple::DashboardController < Adminsimple::ApplicationController
 
   def authenticate!
     unless current_user
-      redirect_to new_session_path(Adminsimple.configuration.devise_model)
+      redirect_to new_session_path(:admin)
       return
     end
-    self.send("authenticate_#{Adminsimple.configuration.devise_model}!")
+    authenticate_admin!
   end
 
 end

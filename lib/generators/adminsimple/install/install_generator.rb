@@ -17,6 +17,14 @@ module Adminsimple
 
       def add_routes
         route "mount Adminsimple::Engine => '/admin'"
+        route <<-RUBY.strip_heredoc
+          scope '/admin' do
+              devise_for :admins, path: '', skip: [:registrations, :confirmations], controllers: {sessions: 'adminsimple/devise/sessions', passwords: 'adminsimple/devise/passwords'}
+              devise_scope :admin do
+                resource :registration, only: [:edit, :update], path: 'profile', controller: 'adminsimple/devise/registrations', as: :admin_registration
+              end
+            end
+        RUBY
       end
 
       private
