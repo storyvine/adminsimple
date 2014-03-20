@@ -20,7 +20,6 @@ module Adminsimple::ViewHelpers
   end
 
   def paginate(collection, options = {})
-    options[:renderer] ||= WillPaginate::BootstrapRenderer
     options[:inner_window] ||= 2
     options[:outer_window] ||= 1
     will_paginate(collection, options)
