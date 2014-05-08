@@ -4,6 +4,10 @@
 
 = render 'details'
 
-- if !request.xhr? && controller.respond_to?(:destroy)
-  %hr
-  = link_to 'Delete', resource_path(resource), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }
+%hr
+
+.row.show-actions
+  .col-sm-10= content_for :actions
+  - if !request.xhr? && controller.respond_to?(:destroy)
+    .col-sm-2
+      = link_to 'Delete', resource_path(resource), method: :delete, class: 'btn btn-danger', style: 'float:right', data: { confirm: 'Are you sure?' }
