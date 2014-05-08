@@ -1,5 +1,6 @@
 #adminsimple_content.content
   .main-content
+    - if flash.any?
+      = flash_messages
     = yield
   .filler
-
