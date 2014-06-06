@@ -9,11 +9,11 @@ class Adminsimple::ApplicationController < Adminsimple.configuration.parent_cont
   protected
 
   def authenticate!
-    authenticate_admin!
+    authenticate_admin_user!
   end
 
   def current_user
-    current_admin
+    current_admin_user
   end
 
   def layout
