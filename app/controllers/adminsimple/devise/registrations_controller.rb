@@ -7,7 +7,7 @@ class Adminsimple::Devise::RegistrationsController < Devise::RegistrationsContro
   private
 
   def authenticate!
-    authenticate_admin!
+    authenticate_admin_user!
   end
 
   def layout

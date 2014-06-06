@@ -12,7 +12,7 @@ class Adminsimple::DashboardController < Adminsimple::ApplicationController
       redirect_to new_session_path(:admin)
       return
     end
-    authenticate_admin!
+    authenticate_admin_user!
   end
 
 end
