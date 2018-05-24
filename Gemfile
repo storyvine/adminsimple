@@ -8,7 +8,7 @@ gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'teabag'
+  gem 'teaspoon'
 
   # required for travis-ci and linux environments
   gem 'phantomjs-linux' if RUBY_PLATFORM =~ /linux/
