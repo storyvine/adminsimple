@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   # Runtime Dependencies
   s.add_dependency 'railties', '>= 3.2.5'
+  s.add_dependency 'responders'
   s.add_dependency 'navigasmic', '>= 1.1.0'
   s.add_dependency 'simple_form', '>= 2.1.0'
   s.add_dependency 'inherited_resources', '>= 1.8.0'
