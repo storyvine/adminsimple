@@ -1,7 +1,5 @@
 class Adminsimple::StyleguideController < Adminsimple::ApplicationController
 
-  add_crumb "Styleguide"
-
   def show
     if params[:view]
       render params[:view]

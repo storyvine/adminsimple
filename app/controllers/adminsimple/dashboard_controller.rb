@@ -1,7 +1,5 @@
 class Adminsimple::DashboardController < Adminsimple::ApplicationController
 
-  add_crumb "Admin"
-
   def index
   end
 

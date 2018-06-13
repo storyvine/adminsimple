@@ -22,5 +22,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'simple_form', '>= 2.1.0'
   s.add_dependency 'inherited_resources', '>= 1.8.0'
   s.add_dependency 'has_scope', '>= 0.7.2'
-  s.add_dependency 'crummy'
 end
